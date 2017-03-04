@@ -15,29 +15,23 @@ and (min-width: 668px) {
       width: 100%;
   }
   #root {
-    width: 340px;
-    height: 540px;
-    margin: 10px auto;
-    border-top-width: 10px;
-    border-right-width: 10px;
-    border-bottom-width: 50px;
-    border-left-width: 10px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 10px;
-  }
-  #root::after {
-    content: " ";
-    border: 1px solid white;
     display: block;
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    border: 1px solid grey;
-    border-radius: 15px;
-    top: 15px;
     position: relative;
-    left: calc(50% - 10px);
+    width: 320px;
+    height: 650px;
+    margin: 5px auto;
+    background-image: url(img/device-android.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
-
+  .App {
+    display: block;
+    position: absolute;
+    width: 280px;
+    height: 484px;
+    top: 65px;
+    left: 20px;
+    overflow: hidden;
+  }
+  
 }
