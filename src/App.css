@@ -10,7 +10,7 @@
 .podcast-view-cell img {
   width: 80px;
   height: 80px;
-  margin: 10px 0 0 10px;
+  margin: 10px;
 }
 .podcast-view-cell .media-body {
   padding: 6px 5px 10px 0;

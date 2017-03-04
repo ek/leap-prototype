@@ -1,37 +1,19 @@
 import React, { Component } from 'react';
-import { Title, TableView, TableViewCell } from 'react-ratchet';
-import PodcastTableViewCell from './PodcastTableViewCell.js'
+// import PodcastTableViewCell from './PodcastTableViewCell.js'
 import logo from './logo.svg';
 import './App.css';
 
-
-class PodcastTableView extends React.Component {
-  render() {
-    return (
-        <TableView>
-          <TableViewCell divider>Episodes</TableViewCell>
-          <PodcastTableViewCell />
-          <PodcastTableViewCell />
-          <PodcastTableViewCell />
-          <PodcastTableViewCell />
-          <PodcastTableViewCell />
-        </TableView>
-    );
-  }
-}
-
-
-
-
+import data from './data';
+import MainView from './containers/MainView';
 
 class App extends Component {
+  renderPage() {
+    
+  }
   render() {
     return (
       <div className="App">
-        <Title className="bar bar-tall">The Daily</Title>
-        <div className="content">
-          <PodcastTableView></PodcastTableView>
-        </div>
+        <MainView data={data} />
       </div>
     );
   }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { TableViewCell } from 'react-ratchet';
+import moment from 'moment';
+import './index.css';
 
 /*
 @prop [divider] {Boolean} Renders a divider cell
@@ -10,15 +12,17 @@ import { TableViewCell } from 'react-ratchet';
 */
 export default class PodcastTableViewCell extends React.Component {
   render() {
+    const { image, title, published, vocabLevel, pace, duration, accent } = this.props;
+
     return (
       <TableViewCell className="podcast-view-cell media">
-        <img className="media-object pull-left " 
-          src="img/the-daily.jpg">
+        <img className="media-object pull-left"
+          src={image}>
         </img>
         <div className="media-body">
-          <h4>Trump Predicts His Own Headlines</h4>
+          <h4>{title}</h4>
           <p>
-            Published on Friday, Feb. 17, 2017 with a Level 2 vocabulary, rapid pace, 8 minute duration, and an American accent.
+            Published on {moment(published).format('dddd, MMM. DD, YYYY')} with a Level {vocabLevel} vocabulary, {pace} pace, {duration} duration, and an {accent} accent.
           </p>
         </div>
       </TableViewCell>
