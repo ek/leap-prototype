@@ -13,6 +13,7 @@
     "reactstrap": "^4.2.0"
   },
   "devDependencies": {
+    "gh-pages": "^0.12.0",
     "ratchet-npm": "^2.0.4",
     "react-scripts": "0.9.3"
   },
@@ -20,6 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
