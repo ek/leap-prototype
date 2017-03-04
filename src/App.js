@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import PodcastTableViewCell from './PodcastTableViewCell.js'
-import logo from './logo.svg';
 import './App.css';
 
 import data from './data';
