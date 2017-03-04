@@ -12,10 +12,10 @@ import './index.css';
 */
 export default class PodcastTableViewCell extends React.Component {
   render() {
-    const { image, title, published, vocabLevel, pace, duration, accent } = this.props;
+    const { image, title, published, vocabLevel, pace, duration, accent, onClick } = this.props;
 
     return (
-      <TableViewCell className="podcast-view-cell media">
+      <TableViewCell className="podcast-view-cell media" onClick={onClick}>
         <img className="media-object pull-left"
           src={image}>
         </img>

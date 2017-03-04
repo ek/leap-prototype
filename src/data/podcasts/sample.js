@@ -3,7 +3,7 @@ module.exports = {
   podcast: 'The Daily',
   title: 'Sample Podcast',
   description: 'President Trump\'s sprawling surprise news conference and the view from Russia. Guests: Jim Rutenberg, the media columnist for the New York Times.',
-  image: 'img/the-daily.jpg',
+  image: 'images/the-daily.jpg',
   published: new Date('2017-01-15'),
   vocabLevel: 2,
   pace: 'rapid',

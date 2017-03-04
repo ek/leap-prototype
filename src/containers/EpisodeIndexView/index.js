@@ -4,19 +4,19 @@ import PodcastTableViewCell from '../../components/PodcastTableViewCell';
 
 import './index.css';
 
-export default class MainView extends Component {
+export default class EpisodeIndexView extends Component {
   renderPodcasts() {
-    const { Podcasts } = this.props.data;
-    return Podcasts.map((podcast) => {
+    const { setPage, podcasts } = this.props; 
+
+    return podcasts.map((podcast, index) => {
       return (
-        <PodcastTableViewCell {...podcast} />
+        <PodcastTableViewCell {...podcast} onClick={() => setPage('show', index)} />
       );
     });
   }
   render() {
-    console.log(this.props.data);
     return (
-      <div className='mainview'>
+      <div>
         <Title className="bar bar-tall">The Daily</Title>
         <div className="content">
           <TableView>
