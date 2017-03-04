@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Title, TableView, TableViewCell } from 'react-ratchet';
 import PodcastTableViewCell from './PodcastTableViewCell.js'
-import logo from './logo.svg';
 import './App.css';
 
 
