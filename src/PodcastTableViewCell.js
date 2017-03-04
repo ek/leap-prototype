@@ -13,7 +13,7 @@ export default class PodcastTableViewCell extends React.Component {
     return (
       <TableViewCell className="podcast-view-cell media">
         <img className="media-object pull-left " 
-          src="img/the-daily.jpg">
+          src="images/the-daily.jpg">
         </img>
         <div className="media-body">
           <h4>Trump Predicts His Own Headlines</h4>
