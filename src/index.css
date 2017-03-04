@@ -13,8 +13,9 @@ html, body {
   border-color: black;
   border-radius: 10px;
 }
+
 #root::after {
-  content: " ";
+  content: "";
   border: 1px solid white;
   display: block;
   width: 20px;
@@ -25,5 +26,4 @@ html, body {
   top: 15px;
   position: relative;
   left: calc(50% - 10px);
-
 }

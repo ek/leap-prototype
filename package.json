@@ -2,6 +2,7 @@
   "name": "leap-prototype",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://ek.github.io/leap-prototype",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
     "react": "^15.4.2",
