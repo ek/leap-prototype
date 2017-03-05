@@ -494,7 +494,7 @@ input[type="button"] {
 }
 
 .bar {
-  position: fixed;
+  position: absolute;
   right: 0;
   left: 0;
   z-index: 10;
@@ -541,7 +541,6 @@ input[type="button"] {
 }
 
 .title {
-  position: absolute;
   display: block;
   width: 100%;
   padding: 0;

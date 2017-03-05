@@ -34,7 +34,18 @@ export default class EpisodeShowView extends React.Component {
 
     return (
       <div>
-        <button onClick={() => setPage('list')}>Back</button>
+        <header className="bar title bar-nav">
+          <button 
+            className="btn pull-left"
+            onClick={() => setPage('list')}>
+            Back
+          </button>
+          <button class="btn pull-right">
+            Right
+          </button>
+          <h1 class="title">Title</h1>
+        </header>
+        
         {this.renderPage()}
       </div>
     );
