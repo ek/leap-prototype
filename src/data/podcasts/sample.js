@@ -1,4 +1,5 @@
 module.exports = {
+  key: '123',
   podcast: 'The Daily',
   title: 'Sample Podcast',
   description: 'President Trump\'s sprawling surprise news conference and the view from Russia. Guests: Jim Rutenberg, the media columnist for the New York Times.',
