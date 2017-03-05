@@ -5,7 +5,7 @@ export default class EpisodeOverview extends React.Component {
     const { setPage, title, description } = this.props;
 
     return (
-      <div>
+      <div className="content">
         {title}
         <button onClick={() => setPage('player')}>Play</button>
       </div>

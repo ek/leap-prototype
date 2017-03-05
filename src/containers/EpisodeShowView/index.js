@@ -30,22 +30,18 @@ export default class EpisodeShowView extends React.Component {
     }
   }
   render() {
-    const { setPage } = this.props;
+    const { setPage, podcast } = this.props;
 
     return (
       <div>
-        <header className="bar title bar-nav">
+        <header className="bar bar-nav">
           <button 
             className="btn pull-left"
             onClick={() => setPage('list')}>
             Back
           </button>
-          <button class="btn pull-right">
-            Right
-          </button>
-          <h1 class="title">Title</h1>
+          <h1 className="title">{podcast.title}</h1>
         </header>
-        
         {this.renderPage()}
       </div>
     );
