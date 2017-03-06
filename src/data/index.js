@@ -1,5 +1,7 @@
-import Podcasts from './podcasts';
+import podcasts from './podcasts';
+import topics from './topics';
 
 export default {
-  Podcasts
+  podcasts,
+  topics
 };

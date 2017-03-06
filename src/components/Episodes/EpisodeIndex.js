@@ -4,7 +4,7 @@ import PodcastTableViewCell from '../../components/PodcastTableViewCell';
 
 import './index.css';
 
-export default class EpisodeIndexView extends Component {
+export default class EpisodeIndex extends Component {
   renderPodcasts() {
     const { setPage, podcasts } = this.props; 
 

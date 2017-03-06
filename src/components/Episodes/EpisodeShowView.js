@@ -36,9 +36,10 @@ export default class EpisodeShowView extends React.Component {
       <div>
         <header className="bar bar-nav">
           <button 
-            className="btn pull-left"
+            className="btn btn-link btn-nav pull-left"
             onClick={() => setPage('list')}>
-            Back
+            <span className="icon icon-left-nav"></span>
+            &nbsp;Back
           </button>
           <h1 className="title">{podcast.title}</h1>
         </header>

@@ -1,9 +1,8 @@
 import React from 'react';
 
-export default class EpisodeOverview extends React.Component {
+export default class EpisodeShow extends React.Component {
   render() {
     const { setPage, title, description } = this.props;
-
     return (
       <div className="content">
         {title}

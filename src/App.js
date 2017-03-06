@@ -2,45 +2,67 @@ import React, { Component } from 'react';
 import './App.css';
 
 import data from './data';
-import EpisodeIndexView from './containers/EpisodeIndexView';
-import EpisodeShowView from './containers/EpisodeShowView';
+
+import AppIntro from './components/App/AppIntro';
+import PodcastIndex from './components/Podcasts/PodcastIndex';
+import PodcastShow from './components/Podcasts/PodcastShow';
+import InfoIndex from './components/Info/InfoIndex';
+import InfoAbout from './components/Info/InfoAbout';
+import TopicIndex from './components/Topics/TopicIndex';
 
 class App extends Component {
   constructor() {
     super();
-
-    this.setPage = this.setPage.bind(this);
-    this.renderPage = this.renderPage.bind(this);
-
+    this.setView = this.setView.bind(this);
+    this.renderView = this.renderView.bind(this);
+    this.getPodcast = this.getPodcast.bind(this);
     this.state = {
-      selectedIndex: null,
-      page: 'list'
+      view: 'AppIntro'
     }
   }
-  setPage(page, selectedIndex = null) {
-    this.setState({page, selectedIndex});
+  setView(view, index = null) {
+    this.setState({view, index});
   }
-  renderPage() {
-    const { page, selectedIndex } = this.state;
-    const { Podcasts } = data;
-    console.log(selectedIndex)
-
-    switch(page) {
-      case 'list':
-        return <EpisodeIndexView podcasts={Podcasts} setPage={this.setPage} />
-      case 'show':
-        return <EpisodeShowView podcast={Podcasts[selectedIndex]} setPage={this.setPage} />
+  getPodcast(index) {
+    return data.podcasts[this.state.index];
+  }
+  renderView(view) {
+    switch(view) {
+      case 'AppIntro':
+        return <AppIntro 
+          setView={this.setView} />
+      case 'PodcastIndex':
+        const podcasts = data.podcasts;
+        return <PodcastIndex 
+          setView={this.setView} 
+          podcasts={podcasts} />
+      case 'PodcastShow':
+        const podcast = this.getPodcast(this.state.index)
+        console.log(podcast)
+        return <PodcastShow 
+          setView={this.setView} 
+          podcast={podcast} />
+      case 'InfoIndex':
+        return <InfoIndex 
+          setView={this.setView} />
+      case 'InfoAbout':
+        return <InfoAbout 
+          setView={this.setView} />
+      case 'TopicIndex':
+        return <TopicIndex 
+          setView={this.setView} 
+          topics={data.topics} />
       default:
-        throw new Error('Invariant');
-        return;
+        return <AppIntro 
+          setView={this.setView} />
     }
   }
   render() {
     return (
       <div className="App">
-        {this.renderPage()}
+        {this.renderView(this.state.view)}
       </div>
-    );
+    )
   }
 }
 

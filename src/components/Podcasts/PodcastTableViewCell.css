@@ -1,0 +1,21 @@
+.podcast-table-view-cell {
+  padding: 0 !important;
+}
+.podcast-table-view-cell img {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+}
+.podcast-table-view-cell .media-body {
+  padding: 6px 5px 10px 0;
+}
+.podcast-table-view-cell .media-body h4 {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 19px;
+  margin-bottom: 4px;
+}
+.podcast-table-view-cell .media-body p {
+  font-size: 12px;
+  line-height: 16px;
+}

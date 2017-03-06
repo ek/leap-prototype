@@ -2,7 +2,7 @@ import React from 'react';
 import AudioPlayer from './AudioPlayer.jsx';
 import './index.css';
 
-export default class EpisodePlayer extends React.Component {
+export default class Player extends React.Component {
   render() {
     const { setPage, audioUrl } = this.props;
 

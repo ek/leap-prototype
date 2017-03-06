@@ -280,7 +280,10 @@ a:active {
 }
 
 .bar-nav ~ .content {
+  /*
+  What is this for?
   padding-top: 44px;
+  */
 }
 
 .bar-header-secondary ~ .content {
@@ -330,11 +333,13 @@ a:active {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 10px;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 h1, .h1 {
   font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 h2, .h2 {
@@ -389,6 +394,9 @@ p {
 }
 .btn:disabled, .btn.disabled {
   opacity: .6;
+}
+.btn-multiline {
+  line-height: 1.3;
 }
 
 .btn-primary {

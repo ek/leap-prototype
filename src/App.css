@@ -4,25 +4,11 @@
   height: 100%;
   width: 100%;
   background: #efeff4;
+  background: white;
 }
-.podcast-view-cell {
-  padding: 0 !important;
+.content {
+  background: white !important;
 }
-.podcast-view-cell img {
-  width: 80px;
-  height: 80px;
-  margin: 10px;
-}
-.podcast-view-cell .media-body {
-  padding: 6px 5px 10px 0;
-}
-.podcast-view-cell .media-body h4 {
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 19px;
-  margin-bottom: 4px;
-}
-.podcast-view-cell .media-body p {
-  font-size: 12px;
-  line-height: 16px;
+.centered {
+  text-align: center;
 }

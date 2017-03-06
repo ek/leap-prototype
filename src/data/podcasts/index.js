@@ -1,5 +1,5 @@
-import Sample from './sample.js';
+import TheDaily from './the-daily';
 
 export default [
-  Sample
+  TheDaily
 ];
