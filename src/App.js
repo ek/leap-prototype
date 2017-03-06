@@ -59,8 +59,8 @@ class App extends Component {
           setView={this.setView} 
           topics={data.topics} />
       default:
-        return <AppIntro 
-          setView={this.setView} />
+        throw new Error('Unknown view name: '+renderView);
+        return;
     }
   }
   render() {
