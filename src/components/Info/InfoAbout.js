@@ -5,13 +5,19 @@ export default class InfoAbout extends React.Component {
   render() {
     const { setView } = this.props;
     return (
-      <div class="info-about">
+      <div className="info-about">
         <Header 
           setView={setView} 
           previousView='AppIntro'
           title="How?"></Header>
         <div className='content content-padded'>
-          <h4>How can listening to podcasts help you master the English language?</h4>
+          <h4 className='italic'>
+            Can listening to podcasts
+            <br/>
+            help you master the
+            <br/>
+            English language?
+          </h4>
           <p>
             To move from novice to expert you need to listen to a lot of spoken English.  This means that practically speaking you need to modify your media habits to include English content as much as possible. 
           </p>

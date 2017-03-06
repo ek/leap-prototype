@@ -12,8 +12,8 @@ export default class PodcastIndex extends React.Component {
       <div className='podcast-index'>
         <Header 
           setView={setView} 
-          previousView='TopicIndex'
-          title='Podcasts' />
+          previousView='TopicIndex' 
+          title='News Podcasts' />
         <div className='content'>
           <TableView>
             {this.renderPodcasts()}
@@ -25,10 +25,10 @@ export default class PodcastIndex extends React.Component {
   renderPodcasts() {
     const {setView,podcasts} = this.props; 
     return podcasts.map((podcast, index) => {
-      const { key, title, author, image, description } = podcast;
+      const {key,title,author,image } = podcast;
       return (
         <PodcastTableViewCell 
-          {...{ key, title, author, image, description }} 
+          {...{ key,title,author,image}} 
           onClick={() => setView('PodcastShow', index)} />
       );
     });

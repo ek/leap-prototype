@@ -12,3 +12,13 @@
 .centered {
   text-align: center;
 }
+p.gray {
+  margin-top: 4px;
+  color: #666 !important;
+}
+.italic {
+  font-style: italic;
+}
+.logo {
+  letter-spacing: -2px;
+}

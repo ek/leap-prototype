@@ -6,5 +6,20 @@
 .image-centered {
   position: relative;
   display: block;
-  margin: 10px auto;
+  margin: 15px auto 10px auto;
+}
+.podcast-show h1 {
+  font-size: 24px;
+  margin: 5px 0;
+  letter-spacing: 0px;
+}
+.podcast-show h4 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+.podcast-show p {
+  font-size: 14px;
+  line-height: 19px;
+  margin-bottom: 25px;
 }

@@ -19,3 +19,6 @@
   font-size: 12px;
   line-height: 16px;
 }
+.podcast-table-view-cell .media-body h4 {
+  margin: 0;
+}

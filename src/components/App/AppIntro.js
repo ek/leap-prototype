@@ -15,7 +15,7 @@ export default class AppIntro extends Component {
   render () {
     return (
       <div className="content content-padded">
-        <h1 className="centered">LEAP</h1>
+        <h1 className="centered italic logo">LEAP</h1>
         <h4 className="centered">
           Improve your English
           <br/>
@@ -32,7 +32,9 @@ export default class AppIntro extends Component {
           <button 
             onClick={this.handleInfoClick} 
             className="btn btn-link btn-multiline">
-            How can listening to podcasts<br/>improve your English?
+            How can listening to podcasts
+            <br/>
+            improve your English?
           </button>
         </p>
       </div>

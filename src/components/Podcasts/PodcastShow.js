@@ -13,17 +13,21 @@ export default class PodcastShow extends React.Component {
           setView={setView} 
           previousView='PodcastIndex'
           title={title} />
-        <div className='content content-padded'>
-          <img className="image-centered image-large"
-            src={image}
-            alt={title}>
-          </img>
-          <h1 className="centered">{title}</h1>
-          <h5 className="centered">by {author}</h5>
-          <p>{description}</p>
-          <button className="btn btn-block">
-            Play
-          </button>
+        <div className='content'>
+          <div className='content-padded'>
+            <img className="image-centered image-large"
+              src={image}
+              alt={title}>
+            </img>
+            <h1 className="centered">{title}</h1>
+            <h4 className="centered">by {author}</h4>
+            <p className="gray">{description}</p>
+          </div>
+          <div className="bar bar-footer">
+              <button className="btn btn-primary btn-block">
+                Choose an episode
+              </button>
+            </div>
         </div>
       </div>
     )
