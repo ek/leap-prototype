@@ -5,7 +5,7 @@ import './PodcastShow.css';
 
 export default class PodcastShow extends React.Component {
   render() {
-    const {setView} = this.props;
+    const {setView,podcastIndex} = this.props;
     const {title,author,image,description} = this.props.podcast;
     return (
       <div className='podcast-show'>
@@ -24,7 +24,9 @@ export default class PodcastShow extends React.Component {
             <p className="gray">{description}</p>
           </div>
           <div className="bar bar-footer">
-              <button className="btn btn-primary btn-block">
+              <button 
+                className="btn btn-primary btn-block"
+                onClick={()=>setView('EpisodeIndex', podcastIndex)}>
                 Choose an episode
               </button>
             </div>

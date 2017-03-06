@@ -1,27 +1,52 @@
 import React, {Component} from 'react';
-import {Title, TableView, TableViewCell} from 'react-ratchet';
-import PodcastTableViewCell from '../../components/PodcastTableViewCell';
-
-import './index.css';
+import {TableView} from 'react-ratchet';
+import EpisodeTableViewCell from './EpisodeTableViewCell';
+import Header from '../shared/Header';
 
 export default class EpisodeIndex extends Component {
-  renderPodcasts() {
-    const { setPage, podcasts } = this.props; 
-
-    return podcasts.map((podcast, index) => {
+  renderEpisodes() {
+    const { setView, podcastIndex, podcast} = this.props;
+    return podcast.episodes.map((episode, episodeIndex) => {
+      const {
+        image,
+        title,
+        author,
+        published,
+        vocabLevel,
+        pace,
+        duration,
+        accent
+      } = episode;
       return (
-        <PodcastTableViewCell {...podcast} onClick={() => setPage('show', index)} />
+        <EpisodeTableViewCell 
+          key={episodeIndex}
+          image={image}
+          title={title}
+          author={author}
+          published={published}
+          vocabLevel={vocabLevel}
+          pace={pace}
+          duration={duration}
+          accent={accent}
+          onClick={() => setView('playEpisode', 
+            podcastIndex, 
+            episodeIndex)} />
       );
     });
   }
   render() {
+    const { setView } = this.props.setView;
+    const { title } = this.props.podcast;
     return (
       <div>
-        <Title className="bar bar-tall">The Daily</Title>
+        <Header
+          setView={setView}
+          title={title}
+          previousView='PodcastShow'
+          />
         <div className="content">
           <TableView>
-            <TableViewCell divider>Episodes</TableViewCell>
-            {this.renderPodcasts()}
+            {this.renderEpisodes()}
           </TableView>
         </div>
       </div>

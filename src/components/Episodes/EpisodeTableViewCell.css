@@ -1,0 +1,19 @@
+.episode-view-cell {
+
+}
+.episode-view-cell img.media-object {
+  width: 42px;
+  height: 42px;
+}
+.episode-title {
+  font-weight: bold;
+  margin: 0;
+}
+.episode-view-cell.table-view-cell {
+  padding-right: 10px;
+}
+.episode-view-cell .media-body p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
