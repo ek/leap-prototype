@@ -27,13 +27,11 @@ class App extends Component {
   }
 
   setView(view, opts = {}) {
-    console.log('opts', opts)
     const newState = { view };
     if(opts.topic) {
       newState.topic = opts.topic;
     }
     if(typeof opts.podcastIndex !== 'undefined') {
-      console.log('setting podcast');
       newState.podcastIndex = opts.podcastIndex;
       newState.podcast = this.getPodcast(opts.podcastIndex);
     }
@@ -41,7 +39,6 @@ class App extends Component {
       newState.episodeIndex = opts.episodeIndex;
       newState.episode = this.getEpisode(opts.episodeIndex);
     }
-    console.log('newstate', newState)
     this.setState(newState);
   }
 
@@ -63,7 +60,6 @@ class App extends Component {
           setView={this.setView} 
           podcasts={this.state.podcasts} />
       case 'PodcastShow':
-        console.log(this.state)
         return <PodcastShow 
           setView={this.setView} 
           podcast={this.state.podcast} 

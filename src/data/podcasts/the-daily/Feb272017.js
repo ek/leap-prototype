@@ -41,8 +41,8 @@ module.exports = {
           text: `Today, for 77 minutes,`,
           visible: false,
           items: []
-        {
         },
+        {
           text: `amid intense scrutiny of his leadership and connections to Russia`,
           visible: false,
           items: ['amid' ,'scrutiny','leadership' ,'connections', 'russia']
@@ -51,7 +51,7 @@ module.exports = {
           text: `President Trump turns the scrutiny back on the news media,`,
           visible: false,
           items: ['president trump', 'turns', 'scrutiny' , 'back on' , 'news media']
-        },
+        }
       ]
     },
     {
@@ -107,8 +107,8 @@ module.exports = {
           text: `It's Friday, February 17th,`,
           visible: false,
           items: []
-        {
         },
+        {
           text: `I turned on the TV`,
           visible: false,
           items: ['turned on']
@@ -202,8 +202,8 @@ module.exports = {
          text: `The press has become so dishonest,`,
          visible: false,
          items: ['press', 'dishonest',]
-        {
         },
+        {
          text: `that if we don't talk about it`,
          visible: false,
          items: ['']
@@ -224,8 +224,8 @@ module.exports = {
          text: `We have to talk about it,`,
          visible: false,
          items: []
-        {
         },
+        {
          text: `But to find out what's going on.`,
          visible: false,
          items: ['find out' ,'going on' ]
@@ -233,7 +233,7 @@ module.exports = {
         {
          text: `Because the press, honestly, is out of control. The level of dishonesty is out of control.`,
          visible: false,
-         items: ['press' ,'honestly', 'out of control' 'dishonesty']
+         items: ['press' ,'honestly', 'out of control', 'dishonesty']
         }
      ]
    },
@@ -324,8 +324,8 @@ module.exports = {
           text: `This was road blocked across the networks,`,
           visible: false,
           items: ['road blocked']
-        {
         },
+        {
           text: `At least, every time I checked`,
           visible: false,
           items: ['at least']
@@ -346,13 +346,13 @@ module.exports = {
           text: `That's a big deal especially during the day,`,
           visible: false,
           items: [ ]
-        {
         },
+        {
           text: `These are millions of Americans at home with the television on`,
           visible: false,
           items: [ ]
-        {
         },
+        {
           text: `watching soaps, watching Ellen, watching what have you`,
           visible: false,
           items: ['soaps', 'ellen,' ]
@@ -368,13 +368,13 @@ module.exports = {
           text: `This broke in and he is talking to his people`,
           visible: false,
           items: ['broke in', ]
-        {
         },
+        {
           text: `The scenario is now have a mental definition`,
           visible: false,
           items: ['scenario' ]
-        {
         },
+        {
           text: `that they can use road blocking, what is it?`,
           visible: false,
           items: ['road blocking' ]

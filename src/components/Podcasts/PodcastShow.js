@@ -7,7 +7,6 @@ export default class PodcastShow extends React.Component {
 
   render() {
     const { setView, podcastIndex, podcast} = this.props;
-    console.log(this.props, podcast);
     const { title, author, image, description } = podcast;
     return (
       <div className='podcast-show'>
