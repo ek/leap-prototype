@@ -4,9 +4,11 @@ import Header from '../shared/Header';
 import './PodcastShow.css';
 
 export default class PodcastShow extends React.Component {
+
   render() {
-    const {setView,podcastIndex} = this.props;
-    const {title,author,image,description} = this.props.podcast;
+    const { setView, podcastIndex, podcast} = this.props;
+    console.log(this.props, podcast);
+    const { title, author, image, description } = podcast;
     return (
       <div className='podcast-show'>
         <Header 
@@ -26,7 +28,7 @@ export default class PodcastShow extends React.Component {
           <div className="bar bar-footer">
               <button 
                 className="btn btn-primary btn-block"
-                onClick={()=>setView('EpisodeIndex', podcastIndex)}>
+                onClick={()=>setView('EpisodeIndex', {podcastIndex} )}>
                 Choose an episode
               </button>
             </div>

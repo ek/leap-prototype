@@ -4,6 +4,25 @@ import EpisodeTableViewCell from './EpisodeTableViewCell';
 import Header from '../shared/Header';
 
 export default class EpisodeIndex extends Component {
+  
+  render() {
+    const { setView } = this.props.setView;
+    const { title } = this.props.podcast;
+    return (
+      <div>
+        <Header
+          setView={setView}
+          title={title}
+          previousView='PodcastShow' />
+        <div className='content'>
+          <TableView>
+            {this.renderEpisodes()}
+          </TableView>
+        </div>
+      </div>
+    )
+  }
+
   renderEpisodes() {
     const { setView, podcastIndex, podcast} = this.props;
     return podcast.episodes.map((episode, episodeIndex) => {
@@ -28,28 +47,9 @@ export default class EpisodeIndex extends Component {
           pace={pace}
           duration={duration}
           accent={accent}
-          onClick={() => setView('playEpisode', 
-            podcastIndex, 
-            episodeIndex)} />
+          onClick={() => setView('EpisodeShow', {podcastIndex,episodeIndex}) } />
       );
     });
   }
-  render() {
-    const { setView } = this.props.setView;
-    const { title } = this.props.podcast;
-    return (
-      <div>
-        <Header
-          setView={setView}
-          title={title}
-          previousView='PodcastShow'
-          />
-        <div className="content">
-          <TableView>
-            {this.renderEpisodes()}
-          </TableView>
-        </div>
-      </div>
-    )
-  }
+
 }

@@ -24,12 +24,12 @@ export default class PodcastIndex extends React.Component {
   }
   renderPodcasts() {
     const {setView,podcasts} = this.props; 
-    return podcasts.map((podcast, index) => {
+    return podcasts.map((podcast, podcastIndex) => {
       const {key,title,author,image } = podcast;
       return (
         <PodcastTableViewCell 
           {...{ key,title,author,image}} 
-          onClick={() => setView('PodcastShow', index)} />
+          onClick={ () => setView('PodcastShow', { podcastIndex: podcastIndex }) } />
       );
     });
   }

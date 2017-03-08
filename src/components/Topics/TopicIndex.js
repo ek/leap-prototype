@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../shared/Header';
 
 export default class TopicIndex extends React.Component {
+
   render() {
     const {setView} = this.props;
     return (
@@ -18,13 +19,14 @@ export default class TopicIndex extends React.Component {
       </div>
     )
   }
+
   renderTopics() {
     const { setView } = this.props; 
     return this.props.topics.map((topic, index) => {
       return (
         <li
           className='table-view-cell'
-          onClick={() => setView('PodcastIndex', topic)}
+          onClick={() => setView('PodcastIndex', { topic: topic })}
           key={index}>
           <a className='navigate-right'>
             {topic}

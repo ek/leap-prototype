@@ -9,60 +9,88 @@ import PodcastShow from './components/Podcasts/PodcastShow';
 import InfoAbout from './components/Info/InfoAbout';
 import TopicIndex from './components/Topics/TopicIndex';
 import EpisodeIndex from './components/Episodes/EpisodeIndex';
+import EpisodeShow from './components/Episodes/EpisodeShow';
 
 class App extends Component {
+
   constructor() {
     super();
     this.setView = this.setView.bind(this);
     this.renderView = this.renderView.bind(this);
     this.getPodcast = this.getPodcast.bind(this);
+    this.getEpisode = this.getEpisode.bind(this);
     this.state = {
-      view: 'AppIntro'
+      view: 'AppIntro',
+      podcasts: data.podcasts,
+      topics: data.topics
     }
   }
-  setView(view, podcastIndex = null, episodeIndex = null) {
-    this.setState({view, podcastIndex, episodeIndex});
+
+  setView(view, opts = {}) {
+    console.log('opts', opts)
+    const newState = { view };
+    if(opts.topic) {
+      newState.topic = opts.topic;
+    }
+    if(typeof opts.podcastIndex !== 'undefined') {
+      console.log('setting podcast');
+      newState.podcastIndex = opts.podcastIndex;
+      newState.podcast = this.getPodcast(opts.podcastIndex);
+    }
+    if(typeof opts.episodeIndex !== 'undefined') {
+      newState.episodeIndex = opts.episodeIndex;
+      newState.episode = this.getEpisode(opts.episodeIndex);
+    }
+    console.log('newstate', newState)
+    this.setState(newState);
   }
+
   getPodcast(index) {
     return data.podcasts[index];
   }
+
   getEpisode(index, podcast) {
     return podcast.episodes[index];
   }
+
   renderView(view) {
     switch(view) {
       case 'AppIntro':
         return <AppIntro 
           setView={this.setView} />
       case 'PodcastIndex':
-        const podcasts = data.podcasts;
         return <PodcastIndex 
           setView={this.setView} 
-          podcasts={podcasts} />
+          podcasts={this.state.podcasts} />
       case 'PodcastShow':
-        const podcast = this.getPodcast(this.state.podcastIndex)
+        console.log(this.state)
         return <PodcastShow 
           setView={this.setView} 
-          podcast={podcast}
+          podcast={this.state.podcast} 
           podcastIndex={this.state.podcastIndex} />
       case 'EpisodeIndex':
-        const ePodcast = this.getPodcast(this.state.podcastIndex)
         return <EpisodeIndex 
           setView={this.setView} 
-          podcast={ePodcast}
+          podcast={this.state.podcast}
           podcastIndex={this.state.podcastIndex} />
+      case 'EpisodeShow':
+        return <EpisodeShow 
+          setView={this.setView} 
+          episode={this.state.episode}
+          podcastIndex={this.state.episodeIndex} />
       case 'InfoAbout':
         return <InfoAbout 
           setView={this.setView} />
       case 'TopicIndex':
         return <TopicIndex 
           setView={this.setView} 
-          topics={data.topics} />
+          topics={this.state.topics} />
       default:
         throw new Error('Unknown view name: '+view);
         return;
     }
   }
+
   render() {
     return (
       <div className="App">
@@ -70,6 +98,7 @@ class App extends Component {
       </div>
     )
   }
+
 }
 
 export default App;
