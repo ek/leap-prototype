@@ -1,8 +1,13 @@
 .table-view-cell.sentence-cell {
-  padding: 15px;
-  font-size: 13px;
+  padding: 0;
+  font-size: 17px;
+  line-height: 25px;
 }
 .table-view-cell.sentence-cell > a:not(.btn) {
   margin: 0;
-  padding: 0;
+  padding: 15px 10px 15px 10px;
+  border-left: 5px solid white;
+}
+.playing {
+  border-left: 5px solid red;
 }

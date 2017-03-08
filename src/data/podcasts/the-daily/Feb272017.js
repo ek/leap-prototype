@@ -1,4 +1,6 @@
 module.exports = {
+  mp3: '/audio/the-daily.mp3',
+  playing: false,
   key: '123',
   title: 'The Daily, February 17th',
   description: 'President Trump\'s sprawling surprise news conference and the view from Russia. Guests: Jim Rutenberg, the media columnist for the New York Times.',

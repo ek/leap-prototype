@@ -23,13 +23,11 @@ export default class PodcastShow extends React.Component {
             <h1 className="centered">{title}</h1>
             <h4 className="centered">by {author}</h4>
             <p className="gray">{description}</p>
-          </div>
-          <div className="bar bar-footer">
-              <button 
-                className="btn btn-primary btn-block"
-                onClick={()=>setView('EpisodeIndex', {podcastIndex} )}>
-                Choose an episode
-              </button>
+            <button 
+              className="btn btn-primary btn-block"
+              onClick={()=>setView('EpisodeIndex', {podcastIndex} )}>
+              Choose an episode
+            </button>
             </div>
         </div>
       </div>
