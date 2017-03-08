@@ -37,7 +37,7 @@ class App extends Component {
     }
     if(typeof opts.episodeIndex !== 'undefined') {
       newState.episodeIndex = opts.episodeIndex;
-      newState.episode = this.getEpisode(opts.episodeIndex);
+      newState.episode = this.getEpisode(opts.episodeIndex, this.getPodcast(opts.podcastIndex));
     }
     this.setState(newState);
   }
