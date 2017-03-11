@@ -1,0 +1,6 @@
+.PlayerAudio {
+  position: fixed;
+  width: 280px;
+  z-index: 10;
+  overflow: hidden;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
+import './PlayerAudio.css';
 
 export default class PlayerAudio extends React.Component {
   constructor() {
@@ -17,17 +18,21 @@ export default class PlayerAudio extends React.Component {
   componentDidMount() {
     // extracts html audioElement from ReactAudioPlayer
     const audioEl = this.rap.audioEl;
-    audioEl.volume = 0.1;
+    audioEl.volume = 0;
     this.setState({audioEl});
   }
   render() {
     const listenInterval = 200;
-    return <ReactAudioPlayer
-            src={this.props.url}
-            listenInterval={listenInterval}
-            onListen={this.props.onListen}
-            onPlay={this.props.onPlay}
-            ref={c => this.rap = c }
-             />
+    return (
+      <div className="PlayerAudio">
+        <ReactAudioPlayer
+          autoPlay
+          src={this.props.url}
+          listenInterval={listenInterval}
+          onListen={this.props.onListen}
+          onPlay={this.props.onPlay}
+          ref={c => this.rap = c } />
+      </div>
+    )
   }
 }

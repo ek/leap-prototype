@@ -1,0 +1,10 @@
+.PlayerTranscript {
+  border: 1px solid lightseagreen;
+  height: calc(100% - 35px);
+  margin-top:35px;
+  width: 100%;
+}
+.PlayerTranscript .table-view {
+  position: fixed;
+  bottom: 0;
+}
