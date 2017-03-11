@@ -7,27 +7,33 @@ export default class Player extends React.Component {
   
   constructor() {
     super();
-    this.chooseSentence = this.chooseSentence.bind(this);
+    this.onPaused = this.onPaused.bind(this);
+    this.state = {
+      paused: false
+    }
   }
-
-  chooseSentence(s) {
-    console.log(s)
+  
+  onPaused(isPaused) {
+    this.setState({
+      isPaused: isPaused
+    });
   }
 
   render() {
 
     const { setView } = this.props.setView;
     const { title, transcript, mp3 } = this.props.episode;
-    // <PlayerAudio url={mp3} />
+
     return (
       <div>
-        
         <Header
           setView={setView}
           title={title}
           previousView='EpisodeShow' />
         <div className='content'>
+          <PlayerAudio url={mp3} isPaused={this.state.isPaused} />
           <PlayerTranscript
+            onPaused={this.onPaused}
             transcript={transcript} />
         </div>
       </div>

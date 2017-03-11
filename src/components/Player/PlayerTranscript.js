@@ -9,7 +9,8 @@ export default class PlayerTranscript extends React.Component {
   }
 
   chooseSentence() {
-    
+    console.log('choos sentence');
+    this.props.onPaused(true);
   }
 
   renderSentences(sentences) {
@@ -23,6 +24,10 @@ export default class PlayerTranscript extends React.Component {
         </PlayerSentence>
       )
     });
+  }
+
+  componentDidMount() {
+    
   }
 
   render() {
