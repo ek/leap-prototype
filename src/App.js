@@ -10,6 +10,7 @@ import InfoAbout from './components/Info/InfoAbout';
 import TopicIndex from './components/Topics/TopicIndex';
 import EpisodeIndex from './components/Episodes/EpisodeIndex';
 import EpisodeShow from './components/Episodes/EpisodeShow';
+import PlayerShow from './components/Player/PlayerShow';
 
 class App extends Component {
 
@@ -25,6 +26,13 @@ class App extends Component {
       topics: data.topics
     }
   }
+  
+  componentDidMount() {
+    this.setView('PlayerShow', {
+      episodeIndex: 0,
+      podcastIndex: 0
+    });
+  }
 
   setView(view, opts = {}) {
     const newState = { view };
@@ -37,7 +45,9 @@ class App extends Component {
     }
     if(typeof opts.episodeIndex !== 'undefined') {
       newState.episodeIndex = opts.episodeIndex;
-      newState.episode = this.getEpisode(opts.episodeIndex, this.getPodcast(opts.podcastIndex));
+      const podcast = this.getPodcast(opts.podcastIndex);
+      console.log(podcast)
+      newState.episode = this.getEpisode(opts.episodeIndex, podcast);
     }
     this.setState(newState);
   }
@@ -71,6 +81,11 @@ class App extends Component {
           podcastIndex={this.state.podcastIndex} />
       case 'EpisodeShow':
         return <EpisodeShow 
+          setView={this.setView} 
+          episode={this.state.episode}
+          episodeIndex={this.state.episodeIndex} />
+      case 'PlayerShow':
+        return <PlayerShow 
           setView={this.setView} 
           episode={this.state.episode}
           podcastIndex={this.state.episodeIndex} />

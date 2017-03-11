@@ -1,58 +1,40 @@
 import React from 'react';
+import ReactAudioPlayer from 'react-audio-player';
+import moment from 'moment';
 
-export default class AudioPlayer extends React.Component {
+export default class PlayerAudio extends React.Component {
+  constructor() {
+    super();
+  }
+  
+  onPlay() {
+    console.log('on play');
+  }
+
+  onListen(seconds) {
+    console.log(moment(seconds));
+  }
+
+  chooseSentence(a) {
+    console.log(a);
+    this.state.audioEl.pause();
+  }
 
   componentDidMount() {
-    
-    function getContext() {
-      var contextClass = (window.AudioContext ||  window.webkitAudioContext || 
-          window.mozAudioContext || 
-          window.oAudioContext || 
-          window.msAudioContext);
-      if (contextClass) {
-        // Web Audio API is available.
-        return new contextClass();
-      } else {
-        console.log('Web Audio API is not available.');
-      }
-    }
-
-    function playSound(buffer) {
-      var source = context.createBufferSource();
-      source.buffer = buffer;
-      source.connect(context.destination);
-      source.start(0);
-    }
-
-    function loadAudio(url, context) {
-      var request = new XMLHttpRequest();
-      request.open('GET', url, true);
-      request.responseType = 'arraybuffer';
-      // Decode asynchronously
-      request.onload = function() {
-          context.decodeAudioData(request.response, function(theBuffer) {
-              var buffer = theBuffer;
-              playSound(buffer);
-          }, function(err) {
-              console.log(err);
-          });
-      }
-      request.send();
-    }
-    const context = getContext();
-    console.log(context)
-    const { audioUrl } = this.props;
-    loadAudio(audioUrl, context);
-
+    // extracts html audioElement from ReactAudioPlayer
+    const audioEl = this.rap.audioEl;
+    this.setState({audioEl});
   }
 
   render() {
-    const { audioUrl } = this.props;
-    return (
-      <h3>
-        {audioUrl}
-      </h3>
-    )
+    const listenInterval = 100;
+    return <ReactAudioPlayer
+            src={this.props.url}
+            listenInterval={listenInterval}
+            onPlay={this.onPlay}
+            onListen={this.onListen}
+            ref={c => this.rap = c }
+            autoPlay />
   }
+
 }
-=
