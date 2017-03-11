@@ -98,7 +98,6 @@ class App extends Component {
           topics={this.state.topics} />
       default:
         throw new Error('Unknown view name: '+view);
-        return;
     }
   }
 

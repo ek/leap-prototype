@@ -1,0 +1,6 @@
+.sentence-cell {
+  display: none;
+}
+.sentence-visible {
+  display: block;
+}

@@ -1,21 +1,13 @@
 import React from 'react';
 import ReactAudioPlayer from 'react-audio-player';
-import moment from 'moment';
 
 export default class PlayerAudio extends React.Component {
   constructor() {
     super();
     this.pause = this.pause.bind(this);
   }
-  onPlay() {
-    console.log('on play');
-  }
-  onListen(seconds) {
-    console.log(moment(seconds));
-  }
   componentWillReceiveProps(nextProps) {
     if(nextProps.isPaused === true) {
-      console.log('isPaused', nextProps.isPaused)
       this.pause();
     }
   }
@@ -29,14 +21,13 @@ export default class PlayerAudio extends React.Component {
     this.setState({audioEl});
   }
   render() {
-    const listenInterval = 100;
+    const listenInterval = 200;
     return <ReactAudioPlayer
             src={this.props.url}
             listenInterval={listenInterval}
-            onPlay={this.onPlay}
-            onListen={this.onListen}
+            onListen={this.props.onListen}
+            onPlay={this.props.onPlay}
             ref={c => this.rap = c }
-            autoPlay />
+             />
   }
-
 }
