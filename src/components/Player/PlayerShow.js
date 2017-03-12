@@ -3,12 +3,13 @@ import Header from '../shared/Header';
 import PlayerTranscript from './PlayerTranscript';
 import PlayerAudio from './PlayerAudio';
 import PlayerDefinitions from './PlayerDefinitions';
+import zf from 'zero-fill';
 import moment from 'moment';
 
 export default class Player extends React.Component {
   constructor(props) {
     super(props);
-    this.chooseSentence = this.chooseSentence.bind(this);
+    this.onChooseSentence = this.onChooseSentence.bind(this);
     this.onPaused = this.onPaused.bind(this);
     this.onListen = this.onListen.bind(this);
     this.onPlay = this.onPlay.bind(this);
@@ -28,13 +29,21 @@ export default class Player extends React.Component {
     console.log('on paused');
   }
   onListen(seconds) {
-    let secs = Math.round(seconds * 1000)/1000;
-    if(secs < 10) { secs = "0"+secs; }
-    const time = moment("00:00:" + secs, "HH:mm:ss.SSS");
+    const hrs = Math.round(seconds/3600);
+    const mins = Math.round((seconds-(hrs*60))/60);
+    const secs = Math.round(((seconds-(hrs*3600)-(mins*60))*1000)/1000);
+    const timeString = `${zf(2,hrs)}:${zf(2,mins)}:${zf(2,secs)}`;
+    const momentFormat = "HH:mm:ss";
+    console.log(timeString)
+    const time = moment(timeString, momentFormat);
     this.setState({ seconds, time });
   }
-  chooseSentence(sentence) {
-    this.setState({sentence});
+  onChooseSentence(sentence) {
+    this.setState({
+      isPaused: true,
+      sentence,
+      
+    });
   }
   render() {
     const { setView } = this.props.setView;
@@ -62,7 +71,7 @@ export default class Player extends React.Component {
         return <PlayerTranscript 
             seconds={state.seconds}
             time={state.time}
-            chooseSentence={this.chooseSentence}
+            onChooseSentence={this.onChooseSentence}
             transcript={state.transcript} />
       case 'definitions':
         return <PlayerDefinitions 

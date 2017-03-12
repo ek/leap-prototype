@@ -22,7 +22,6 @@ export default class PlayerTranscript extends React.Component {
   
   constructor(props) {
     super(props);
-    this.chooseSentence = this.chooseSentence.bind(this);
     const sentences = props.transcript.map((s,i,a) => {
       s.playing = false;
       s.startMoment = moment(s.start, "HH:mm:ss.SSS");
@@ -61,12 +60,11 @@ export default class PlayerTranscript extends React.Component {
   }
   
   renderSentences(sentences) {
-    const chooseSentence = this.chooseSentence;
     return sentences.map((sentence, index) => {
       return (
         <div key={index}>
           <PlayerSentence
-            clicked={chooseSentence}
+            clicked={this.props.onChooseSentence}
             sentence={sentence}
             visible={sentence.visible}>
           </PlayerSentence>
@@ -74,10 +72,5 @@ export default class PlayerTranscript extends React.Component {
       )
     });
   }
-
-  chooseSentence(sentence) {
-    this.props.chooseSentence(sentence);
-  }
-
   
 }

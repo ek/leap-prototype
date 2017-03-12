@@ -9,7 +9,12 @@ export default class PlayerDefinitions extends React.Component {
   }
   returnStateFromProps(props) {
     const sentence = this.props.sentence;
-    const definitions = [];
+    const definitions = sentence.sections.map(s=>{
+      return s.items.map(i=>{
+        return i;
+      });
+    });
+    console.log(definitions)
     return { sentence, definitions }
   }
   render() {
@@ -25,8 +30,7 @@ export default class PlayerDefinitions extends React.Component {
     this.setState(this.returnStateFromProps(props))
   }
   renderDefinitions(definitions) {
-    const chooseSentence = this.chooseSentence;
-    return definitions.map((sentence, index) => {
+    return definitions.map((d, index) => {
       return (
         <li key={index}>
           
