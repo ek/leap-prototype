@@ -18,19 +18,19 @@ $('.inp').keyup(function(e) {
 .focus();
 */
 
-
 export default class PlayerTranscript extends React.Component {
   constructor(props) {
     super(props);
     this.chooseSentence = this.chooseSentence.bind(this);
-    const sentences = props.transcript.map(s => {
+    const sentences = props.transcript.map((s,i,a) => {
       s.playing = false;
-      s.moment = moment(s.start, "HH:mm:ss.SSS");
+      s.startMoment = moment(s.start, "HH:mm:ss.SSS");
+      if(i) {
+        a[i-1].endMoment = s.startMoment;
+      }
       return s;
     });
-    this.state = {
-      sentences
-    }
+    this.state = { sentences };
   }
   render() {
     return (
@@ -44,14 +44,15 @@ export default class PlayerTranscript extends React.Component {
   componentWillReceiveProps(props) {
     const time = props.time || moment("00:00:00.000", "HH:mm:ss.SSS");
     let changedFlag = false;
-    const sentences = this.state.sentences.map(s => {
+    const sentences = this.state.sentences.map((s,i) => {
       const previouslyVisible = s.visible;
-      s.visible = s.moment.isBefore(time);
+      s.key = i;
+      s.visible = s.startMoment.isBefore(time);
+      s.playing = time.isAfter(s.startMoment) && time.isBefore(s.endMoment);
       changedFlag = previouslyVisible !== s.visible ? true : changedFlag;
       return s;
     });
     if(changedFlag) {
-      console.log('changed')
       this.setState({sentences});
     }
   }
@@ -62,12 +63,13 @@ export default class PlayerTranscript extends React.Component {
     const chooseSentence = this.chooseSentence;
     return sentences.map((sentence, index) => {
       return (
-        <PlayerSentence
-          clicked={chooseSentence}
-          sentence={sentence}
-          key={index}
-          visible={sentence.visible}>
-        </PlayerSentence>
+        <div key={index}>
+          <PlayerSentence
+            clicked={chooseSentence}
+            sentence={sentence}
+            visible={sentence.visible}>
+          </PlayerSentence>
+        </div>
       )
     });
   }

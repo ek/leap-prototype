@@ -23,7 +23,6 @@ export default class Player extends React.Component {
     let secs = Math.round(seconds * 1000)/1000;
     if(secs < 10) { secs = "0"+secs; }
     const time = moment("00:00:" + secs, "HH:mm:ss.SSS");
-    console.log(time);
     this.setState({ seconds, time });
   }
   onPaused(isPaused) {

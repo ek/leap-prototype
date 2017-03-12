@@ -1,6 +1,29 @@
-.sentence-cell {
+/*
+.table-view-cell.sentence-cell {
   display: none;
+  padding: 0;
+  font-size: 17px;
+  line-height: 25px;
 }
-.sentence-visible {
+*/
+.table-view-cell.sentence-cell {
+  border-top: 1px solid #cccccc;
+  display: none;
+  padding: 0;
+}
+.table-view-cell.sentence-cell > a:not(.btn) {
+  margin: 0;
+  padding: 10px 5px 15px 10px;
+  font-size: 16px;
+  line-height: 22px;
+}
+.table-view-cell.sentence-cell.playing > a:not(.btn) {
+  border-left: 5px solid limegreen;
+  padding-left: 5px;
+  border-right: 5px solid limegreen;
+  padding-right: 5px;
+}
+
+.table-view-cell.sentence-cell.sentence-visible {
   display: block;
 }

@@ -1,5 +1,4 @@
 .PlayerTranscript {
-  border: 1px solid lightseagreen;
   height: calc(100% - 35px);
   margin-top:35px;
   width: 100%;
@@ -7,4 +6,8 @@
 .PlayerTranscript .table-view {
   position: fixed;
   bottom: 0;
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
