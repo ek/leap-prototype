@@ -18,11 +18,11 @@ export default class PlayerAudio extends React.Component {
   componentDidMount() {
     // extracts html audioElement from ReactAudioPlayer
     const audioEl = this.rap.audioEl;
-    audioEl.volume = 0;
+    audioEl.volume = 0.8;
     this.setState({audioEl});
   }
   render() {
-    const listenInterval = 1000;
+    const listenInterval = 200;
     return (
       <div className="PlayerAudio">
         <ReactAudioPlayer
