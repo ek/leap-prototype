@@ -29,13 +29,11 @@ export default class Player extends React.Component {
     console.log('on paused');
   }
   onListen(seconds) {
-    console.log(seconds)
     const hrs = Math.floor(seconds/3600);
     const mins = Math.floor((seconds-(hrs*60))/60);
     const secs = Math.floor(((seconds-(hrs*3600)-(mins*60))*1000)/1000);
     const timeString = `${zf(2,hrs)}:${zf(2,mins)}:${zf(2,secs)}`;
     const momentFormat = "HH:mm:ss";
-    console.log(timeString)
     const time = moment(timeString, momentFormat);
     this.setState({ seconds, time });
   }
