@@ -19,6 +19,7 @@ $('.inp').keyup(function(e) {
 */
 
 export default class PlayerTranscript extends React.Component {
+  
   constructor(props) {
     super(props);
     this.chooseSentence = this.chooseSentence.bind(this);
@@ -32,6 +33,7 @@ export default class PlayerTranscript extends React.Component {
     });
     this.state = { sentences };
   }
+  
   render() {
     return (
       <div className="PlayerTranscript">
@@ -41,6 +43,7 @@ export default class PlayerTranscript extends React.Component {
       </div>
     )
   }
+
   componentWillReceiveProps(props) {
     const time = props.time || moment("00:00:00.000", "HH:mm:ss.SSS");
     let changedFlag = false;
@@ -56,9 +59,7 @@ export default class PlayerTranscript extends React.Component {
       this.setState({sentences});
     }
   }
-  chooseSentence(sentence) {
-    this.props.onPaused(true);
-  }
+  
   renderSentences(sentences) {
     const chooseSentence = this.chooseSentence;
     return sentences.map((sentence, index) => {
@@ -73,8 +74,10 @@ export default class PlayerTranscript extends React.Component {
       )
     });
   }
-  componentDidMount() {
-    
+
+  chooseSentence(sentence) {
+    this.props.chooseSentence(sentence);
   }
+
   
 }

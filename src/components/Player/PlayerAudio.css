@@ -1,6 +1,11 @@
 .PlayerAudio {
+  display: block;
   position: fixed;
-  width: 280px;
+  width: 100%;
+  min-width: 280px;
+  height: 35px;
   z-index: 10;
   overflow: hidden;
+  border-bottom: 1px solid #cccccc;
+  background: #eeeeee;
 }
