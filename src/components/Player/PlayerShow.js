@@ -41,7 +41,7 @@ export default class Player extends React.Component {
     this.setState({
       isPaused: true,
       sentence,
-      
+      view: 'definitions'
     });
   }
   render() {

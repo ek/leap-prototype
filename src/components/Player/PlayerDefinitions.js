@@ -8,37 +8,34 @@ export default class PlayerDefinitions extends React.Component {
     this.state = this.returnStateFromProps(props);
   }
   returnStateFromProps(props) {
-    const sentence = this.props.sentence;
-    const definitions = sentence.sections.map(s=>{
+    const definitions = this.props.sentence.sections.map(s=>{
       return s.items.map(i=>{
         return i;
-      });
+      })
+    }).reduce(function(prev, curr) {
+      return prev.concat(curr); // reduce multidimensional array
     });
-    console.log(definitions)
-    return { sentence, definitions }
+    return { definitions }
   }
   render() {
     return (
-      <div className="PlayerDefinitions">
+      <div className="PlayerDefinitions PlayerTranscript">
         <ul className="table-view">
           {this.renderDefinitions(this.state.definitions)}
         </ul>
       </div>
     )
   }
-  componentWillReceiveProps(props) {
-    this.setState(this.returnStateFromProps(props))
+  componentWillReceiveProps(newProps) {
+    this.setState(this.returnStateFromProps(newProps))
   }
   renderDefinitions(definitions) {
     return definitions.map((d, index) => {
       return (
-        <li key={index}>
-          
+        <li className="table-view-cell" key={index}>
+          {d.word}: {d.definition}
         </li>
       )
     });
   }
-  chooseSentence(sentence) {
-    this.props.chooseSentence(sentence);
-  }  
 }

@@ -1,0 +1,15 @@
+.PlayerDefinitions {
+  height: calc(100% - 35px);
+  margin-top: 35px;
+  width: 100%;
+}
+.PlayerDefinitions .table-view {
+  position: fixed;
+  bottom: 0;
+}
+.PlayerDefinitions .table-view-cell {
+  margin: 0;
+  padding: 10px 12px 15px 12px;
+  font-size: 14px;
+  line-height: 20px;
+}

@@ -37,14 +37,18 @@ module.exports = {
             {
               key: "michael barbaro",
               word: "Michael Barbaro",
-              definition: "Reporter at The New York Times, hosting the New York Times new podcast The Daily."
+              definition: "Reporter at The New York Times, host of podcast The Daily."
             }
           ]
         },
         {
           text: `This is The Daily,`,
           visible: false,
-          items: ["the daily"]
+          items: [{
+              key: "the daily",
+              word: "The Daily",
+              definition: "The Daily is a podcast from The New York Times hosted Michael Barbaro."
+            }]
         }
       ]
     },
