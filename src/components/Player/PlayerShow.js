@@ -10,10 +10,13 @@ export default class Player extends React.Component {
   constructor(props) {
     super(props);
     this.onChooseSentence = this.onChooseSentence.bind(this);
+    this.localSetView = this.localSetView.bind(this);
+    this.globalSetView = props.setView;
     this.onPaused = this.onPaused.bind(this);
     this.onListen = this.onListen.bind(this);
     this.onPlay = this.onPlay.bind(this);
     this.state = {
+      setView: this.globalSetView,
       paused: false,
       time: null,
       seconds: null,
@@ -41,18 +44,26 @@ export default class Player extends React.Component {
     this.setState({
       isPaused: true,
       sentence,
-      view: 'definitions'
+      view: 'definitions',
+      previousView: 'transcript',
+      setView: this.localSetView
+    });
+  }
+  localSetView(view) {
+    this.setState({
+      view, 
+      setView: this.globalSetView,
+      isPaused: false
     });
   }
   render() {
-    const { setView } = this.props.setView;
     const { title, mp3 } = this.props.episode;
     return (
       <div>
         <Header
-          setView={setView}
+          setView={this.state.setView}
           title={title}
-          previousView='EpisodeShow' />
+          previousView={this.state.previousView} />
         <div className='content'>
           <PlayerAudio 
             url={mp3} 

@@ -9,11 +9,9 @@ export default class PlayerDefinitions extends React.Component {
   }
   returnStateFromProps(props) {
     const definitions = this.props.sentence.sections.map(s=>{
-      return s.items.map(i=>{
-        return i;
-      })
+      return s.items.length ? s.items.map(i=>{return i;}) : [];
     }).reduce(function(prev, curr) {
-      return prev.concat(curr); // reduce multidimensional array
+      return curr.length ? prev.concat(curr) : prev; // reduce multidimensional array
     });
     return { definitions }
   }
@@ -33,7 +31,8 @@ export default class PlayerDefinitions extends React.Component {
     return definitions.map((d, index) => {
       return (
         <li className="table-view-cell" key={index}>
-          {d.word}: {d.definition}
+          <h4>{d.word}:</h4>
+          <p>{d.definition}</p>
         </li>
       )
     });
