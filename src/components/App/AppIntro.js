@@ -16,10 +16,8 @@ export default class AppIntro extends Component {
     return (
       <div className="content content-padded">
         <h1 className="centered italic logo">LEAP</h1>
-        <h4 className="centered">
-          Improve your English
-          <br/>
-          while listening to podcasts
+        <h4 className="centered tagline">
+          Learn English with any podcast
         </h4>
         <br/>
         <button

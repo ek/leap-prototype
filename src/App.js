@@ -28,7 +28,7 @@ class App extends Component {
   }
   
   componentDidMount() {
-    this.setView('PlayerShow', {
+    this.setView('AppIntro', {
       episodeIndex: 0,
       podcastIndex: 0
     });

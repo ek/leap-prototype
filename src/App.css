@@ -20,5 +20,9 @@ p.gray {
   font-style: italic;
 }
 .logo {
-  letter-spacing: -2px;
+  letter-spacing: -6px;
+  font-size: 62px;
+}
+.tagline {
+  font-size: 22px;
 }
