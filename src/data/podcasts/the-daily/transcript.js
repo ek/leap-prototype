@@ -1,7 +1,7 @@
 module.exports = [
     {
       text: `From the "New York Times," I'm Michael Barbaro. This is The Daily.`,
-      start: "00:00:00.050",
+      start: "00:00:00.000",
       visible: false,
       sections: [
         {

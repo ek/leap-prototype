@@ -19,3 +19,9 @@
 .episode-media {
 
 }
+.btn-play {
+  padding-bottom: 100px;
+}
+.btn-play::before {
+  content: url('play.svg');
+}

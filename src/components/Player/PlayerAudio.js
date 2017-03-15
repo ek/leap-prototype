@@ -6,14 +6,20 @@ export default class PlayerAudio extends React.Component {
   constructor() {
     super();
     this.pause = this.pause.bind(this);
+    this.play = this.play.bind(this);
   }
   componentWillReceiveProps(nextProps) {
     if(nextProps.isPaused === true) {
       this.pause();
+    } else {
+      this.play();
     }
   }
   pause(a) {
     this.state.audioEl.pause();
+  }
+  play(a) {
+    this.state.audioEl.play();
   }
   componentDidMount() {
     // extracts html audioElement from ReactAudioPlayer
