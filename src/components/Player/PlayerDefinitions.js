@@ -11,7 +11,6 @@ export default class PlayerDefinitions extends React.Component {
     const definitions = this.props.sentence.sections.map(s=>{
       return s.items.length ? s.items.map(i=>{return i;}) : [];
     }).reduce(function(prev, curr) {
-      console.log(curr)
       return curr.length ? prev.concat(curr) : prev; // reduce multidimensional array
     });
     return { definitions }
@@ -32,7 +31,7 @@ export default class PlayerDefinitions extends React.Component {
     return definitions.map((d, index) => {
       return (
         <li className="table-view-cell" key={index}>
-          <h4>{d.word}:</h4>
+          <h4>{d.word}</h4>
           <p>{d.definition}</p>
         </li>
       )
