@@ -47,7 +47,7 @@ export default class EpisodeIndex extends Component {
           pace={pace}
           duration={duration}
           accent={accent}
-          onClick={() => setView('EpisodeShow', {podcastIndex,episodeIndex}) } />
+          onClick={() => setView('PlayerShow', {podcastIndex,episodeIndex}) } />
       );
     });
   }

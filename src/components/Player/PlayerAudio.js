@@ -28,7 +28,7 @@ export default class PlayerAudio extends React.Component {
     this.setState({audioEl});
   }
   render() {
-    const listenInterval = 200;
+    const listenInterval = 100;
     return (
       <div className="PlayerAudio">
         <ReactAudioPlayer
