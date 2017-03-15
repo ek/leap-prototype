@@ -17,7 +17,7 @@ export default class PlayerDefinitions extends React.Component {
   }
   render() {
     return (
-      <div className="PlayerDefinitions PlayerTranscript">
+      <div className="PlayerDefinitions">
         <ul className="table-view">
           {this.renderDefinitions(this.state.definitions)}
         </ul>
