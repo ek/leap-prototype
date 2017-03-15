@@ -11,6 +11,7 @@ export default class PlayerDefinitions extends React.Component {
     const definitions = this.props.sentence.sections.map(s=>{
       return s.items.length ? s.items.map(i=>{return i;}) : [];
     }).reduce(function(prev, curr) {
+      console.log(curr)
       return curr.length ? prev.concat(curr) : prev; // reduce multidimensional array
     });
     return { definitions }

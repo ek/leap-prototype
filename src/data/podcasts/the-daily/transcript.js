@@ -82,13 +82,16 @@ module.exports = [
           text: `President Trump turns the scrutiny back on the news media,`,
           visible: false,
           items: [
-            "president trump",
             {
               key: "turns",
               word: "Turns",
-              definition: "Change or cause to change direction."
+              definition: "Change direction"
             },
-            "scrutiny",
+            {
+              key: "scrutiny",
+              word: "Scrutiny",
+              definition: "critical observation or examination."
+            },
             {
               key: "back on",
               word: "Back on",
