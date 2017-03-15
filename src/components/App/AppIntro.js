@@ -29,7 +29,7 @@ export default class AppIntro extends Component {
         <p className="centered">
           <button 
             onClick={this.handleInfoClick} 
-            className="btn btn-link btn-multiline">
+            className="btn btn-link btn-multiline btn-intro">
             How can listening to podcasts
             <br/>
             improve your English?

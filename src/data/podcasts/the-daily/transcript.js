@@ -88,11 +88,6 @@ module.exports = [
               definition: "Change direction"
             },
             {
-              key: "scrutiny",
-              word: "Scrutiny",
-              definition: "critical observation or examination."
-            },
-            {
               key: "back on",
               word: "Back on",
               definition: " Reverse the direction of something."
