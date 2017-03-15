@@ -19,6 +19,9 @@ export default class PlayerDefinitions extends React.Component {
     return (
       <div className="PlayerDefinitions">
         <ul className="table-view">
+          <li className="table-view-cell sentence-head">
+            <h6 className="">{this.props.sentence.text}</h6>
+          </li>
           {this.renderDefinitions(this.state.definitions)}
         </ul>
       </div>
