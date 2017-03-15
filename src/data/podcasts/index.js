@@ -82,7 +82,6 @@ export default [
     description: '',
     episodes: []
   },
-
   {
     key: 12,
     title: '60 Minutes',
@@ -91,7 +90,6 @@ export default [
     description: '',
     episodes: []
   },
-
   {
     key: 13,
     title: 'Undone',
@@ -100,7 +98,6 @@ export default [
     description: '',
     episodes: []
   },
-
   {
     key: 14,
     title: 'The Economist Radio',
@@ -109,7 +106,6 @@ export default [
     description: '',
     episodes: []
   },
-
   {
     key: 15,
     title: 'Slate Political Gabfest',
@@ -117,8 +113,7 @@ export default [
     image: 'images/slate-political-gabfest.jpg',
     description: '',
     episodes: []
-  },
-
+  }
 ];
 
 /*
