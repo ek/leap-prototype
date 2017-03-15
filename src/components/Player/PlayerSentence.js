@@ -22,6 +22,10 @@ export default class PlayerSentence extends React.Component {
         <a onClick={this.chooseSentence}>
           {this.props.sentence.text}
         </a>
+        <button onClick={this.chooseSentence}
+          className="btn btn-positive btn-outlined">
+          Definitions
+        </button>
       </li>
     )
     

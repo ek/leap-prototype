@@ -20,8 +20,11 @@
 
 }
 .btn-play {
-  padding-bottom: 100px;
+
 }
 .btn-play::before {
   content: url('play.svg');
+  position: absolute;
+  left: 38px;
+  top: 10px;
 }
