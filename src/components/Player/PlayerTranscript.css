@@ -13,3 +13,6 @@
   -o-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
 }
+.PlayerTranscript .table-view {
+  margin-bottom: 0;
+}

@@ -8,11 +8,13 @@
   font-size: 18px;
   line-height: 25px;
 }
+.table-view-cell.sentence-cell > a:not(.btn) {
+  border-left: 10px solid #cccccc;
+  padding-left: 10px;
+}
 .table-view-cell.sentence-cell.playing > a:not(.btn) {
   border-left: 10px solid limegreen;
   padding-left: 10px;
-  border-right: 0 solid limegreen;
-  padding-right: 5px;
 }
 
 .table-view-cell.sentence-cell.sentence-visible {
@@ -23,5 +25,5 @@
 }
 
 .table-view-cell.sentence-cell > .btn {
-  top: 85%;
+  top: 82%;
 }
