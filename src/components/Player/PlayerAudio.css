@@ -8,4 +8,15 @@
   overflow: hidden;
   border-bottom: 1px solid #cccccc;
   background: #eeeeee;
+  width: 280px;
+  overflow: hidden;
 }
+.react-audio-player {
+  width: 460px;
+}
+@media only screen and (max-width : 667px) {
+  .react-audio-player {
+    width: 100px;
+  }
+}
+

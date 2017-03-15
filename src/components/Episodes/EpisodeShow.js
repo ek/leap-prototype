@@ -22,12 +22,12 @@ export default class EpisodeShow extends React.Component {
             <div className='media-body'>
               <h4 className='episode-title'>{title}</h4>
               <p>{description}</p>
-            </div>    
+            </div>
           </div>
           <button 
             className='btn btn-primary btn-block'
             onClick={() => setView('PlayerShow', {})}>
-            &#x25b6;  &nbsp;Play Episode
+            &#x25b6;&nbsp;Play Episode
           </button>
         </div>
       </div>

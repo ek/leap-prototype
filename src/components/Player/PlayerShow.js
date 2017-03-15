@@ -64,7 +64,7 @@ export default class Player extends React.Component {
           setView={this.state.setView}
           title={title}
           previousView={this.state.previousView} />
-        <div className='content'>
+        <div className='content contentPlayerShow'>
           <PlayerAudio 
             url={mp3} 
             onListen={this.onListen} 
