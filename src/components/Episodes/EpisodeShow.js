@@ -27,7 +27,7 @@ export default class EpisodeShow extends React.Component {
           <button 
             className='btn btn-primary btn-block'
             onClick={() => setView('PlayerShow', {})}>
-            Play Episode
+            &#x25b6;  &nbsp;Play Episode
           </button>
         </div>
       </div>

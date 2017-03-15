@@ -12,6 +12,10 @@
   line-height: 16px;
 }
 .episode-media img.media-object {
-  width: 42px;
-  height: 42px;
+  width: 102px;
+  height: 102px;
+  margin: 0 10px 10px;
+}
+.episode-media {
+
 }
