@@ -1,7 +1,6 @@
 .PlayerAudio {
   display: block;
   position: fixed;
-  width: 100%;
   min-width: 280px;
   height: 35px;
   z-index: 10;
@@ -15,8 +14,11 @@
   width: 460px;
 }
 @media only screen and (max-width : 667px) {
+  .PlayerAudio {
+    width: 100%;
+  }
   .react-audio-player {
-    width: 100px;
+    width: 102%;
   }
 }
 
