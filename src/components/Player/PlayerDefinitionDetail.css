@@ -16,11 +16,12 @@
   box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.25);
 }
 .PlayerDefinitionDetail .table-view-cell.sentence-head {
-  padding: 20px 6px 5px 18px;
+  padding: 14px 0 6px 20px;
+  font-style: italic;
   margin: 0;
   box-shadow: none;
 }
 .PlayerDefinitionDetail .table-view-cell.sentence-head h3 {
-  font-size: 26px;
-  line-height: 28px;
+  font-size: 20px;
+  line-height: 24px;
 }

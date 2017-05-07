@@ -23,6 +23,7 @@ module.exports = [
             {
               key: "michael barbaro",
               word: "Michael Barbaro",
+              image: 'michael-barbaro.jpg',
               definition: "Reporter at The New York Times, host of podcast The Daily."
             }
           ]
@@ -33,6 +34,7 @@ module.exports = [
           items: [{
               key: "the daily",
               word: "The Daily",
+              image: 'the-daily.jpg',
               definition: "The Daily is a podcast from The New York Times hosted Michael Barbaro."
             }]
         }
@@ -55,27 +57,32 @@ module.exports = [
             {
               key: "amid",
               word: "Amid",
+              image: 'amid-the-flowers.jpg',
               definition: "In an atmosphere or against a background of."
             },
             {
               key: "scrutiny",
               word: "Scrutiny",
+              image: 'scrutiny.jpg',
               definition: "Critical observation or examination."
             },
             {
               key: "leadership",
               word: "Leadership",
+              image: 'leadership.jpg',
               definition: "The action of leading a group of people or an organization."
             },
             {
               key: "connections",
               word: "Connections",
+              image: 'connections.png',
               definition: "A relationship in which a person, thing, or idea is linked or associated with something else."
             },
             {
               key: "russia",
               word: "Russia",
-              definition: "Also officially the Russian Federation, is a country in Eurasia. At 17,075,200 square kilometres (6,592,800 sq mi), Russia is the largest country in the world by surface area, covering more than one-eighth of the Earth. Isthe ninth most populous country, with over 144 million people at the end of March 2016."
+              image: 'russia.jpg',
+              definition: "Officially the Russian Federation, is a country in Eurasia. At 17,075,200 square kilometres (6,592,800 sq mi), Russia is the largest country in the world by surface area, covering more than one-eighth of the Earth. Isthe ninth most populous country, with over 144 million people at the end of March 2016."
             }
           ]
         },
@@ -86,15 +93,24 @@ module.exports = [
             {
               key: "turns",
               word: "Turns",
+              image: 'turns.gif',
               definition: "Change direction"
+            },
+            {
+              key: "scrutiny",
+              word: "Scrutiny",
+              image: 'scrutiny.jpg',
+              definition: "Critical observation or examination."
             },
             {
               key: "back on",
               word: "Back on",
+              image: 'back-on.gif',
               definition: " Reverse the direction of something."
             },
             {
               key: "news media",
+              image: 'news-media.gif',
               word: "News media",
               definition: " An umbrella term for all the sources and presentation of news and information, including: TV, radio, newspapers, magazines, web pages and blogs."
             }
@@ -103,7 +119,7 @@ module.exports = [
       ]
     },
     {
-      text: `Attacking its credibility and its judgment during a remarkable news conference and the view from Russia.`,
+      text: `Attacking its credibility and its judgment during a remarkable news conference`,
       start: "00:00:18.000",
       visible: false,
       sections: [
@@ -114,15 +130,18 @@ module.exports = [
             {
               key: "attacking",
               word: "Attacking",
+              image: 'attacking.gif',
               definition: "Take aggressive action against a place or person."
             },
             {
               key: "credibility",
               word: "Credibility",
+              image: 'credibility.jpg',
               definition: "The quality of being trusted and believed in."
             },
             {
               key: "judgement",
+              image: 'judgement.jpg'
               word: "Judgement",
               definition: "The ability to make considered decisions or come to sensible conclusions."
             }
@@ -135,19 +154,34 @@ module.exports = [
             {
               key: "remarkable",
               word: "Remarkable",
+              image: 'remarkable.gif',
               definition: "Worthy of attention; striking."
             },
             {
               key: "news conference",
+              image: 'news-conference.gif',
               word: "News conference",
               definition: "A press conference."
             }
           ]
+        }
+      ]
+    },
+    {
+      text: `, and the view from Russia,`,
+      visible: false,
+      items: [
+        {
+          key: "the view",
+          word: "the view",
+          image: 'the-view.gif',
+          definition: "a particular way of considering or regarding something; an attitude or opinion."
         },
         {
-          text: `and the view from Russia,`,
-          visible: false,
-          items: []
+          key: "russia",
+          word: "Russia",
+          image: 'russia.jpg',
+          definition: "Officially the Russian Federation, is a country in Eurasia. At 17,075,200 square kilometres (6,592,800 sq mi), Russia is the largest country in the world by surface area, covering more than one-eighth of the Earth. Isthe ninth most populous country, with over 144 million people at the end of March 2016."
         }
       ]
     },
@@ -162,20 +196,29 @@ module.exports = [
           items: [
             {
               key: "vladimir putin",
+              image: 'putin.jpg',
               word: "Vladimir Putin",
               definition: "The president of Russia since 2000. Putin served in the KGB, the secret police for the former Soviet Union, then entered politics after the collapse of communism. In 1999, Russian president Boris Yeltsin appointed Putin prime minister, his fifth in seventeen months."
             }
           ]
         },
         {
-          text: `made relish all of this attention,`,
+          text: `may relish all of this attention,`,
           visible: false,
           items: [
             {
               key: "relish",
               word: "Relish",
+              image: 'relish.jpg',
               definition: "take pleasure in, enjoy greatly, be happy about"
-            }
+            },
+            {
+              key: "attention",
+              word: "Attention",
+              image: 'urkel.gif',
+              definition: "notice taken of someone or something; the regarding of someone or something as interesting or important."
+            },
+
           ]
         },
         {
@@ -184,6 +227,7 @@ module.exports = [
           items: [{
             key: 'no matter',
             word: 'no matter',
+            image: 'no-matter.gif',
             definition: 'regardless of, of no importance.'
           }]
         }

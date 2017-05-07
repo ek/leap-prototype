@@ -13,7 +13,7 @@
   margin: 0;
   padding: 12px 12px 48px 12px;
   font-size: 15px;
-  line-height: 25px;
+  line-height: 22px;
 }
 .table-view-cell.sentence-cell > a:not(.btn) {
   border-left: 3px solid #cccccc;
