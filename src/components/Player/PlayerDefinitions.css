@@ -40,6 +40,9 @@
   box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.1);
   border-left: 3px solid #8C1515;
 }
+.PlayerDefinitions .definition-cell a {
+  cursor: pointer;
+}
 .PlayerDefinitions .definition-cell.navigate-right:after
 {
   right: 8px;

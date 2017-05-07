@@ -12,8 +12,8 @@
 }
 .table-view-cell.sentence-cell > a:not(.btn) {
   margin: 0;
-  padding: 12px 12px 52px 12px;
-  font-size: 18px;
+  padding: 12px 12px 48px 12px;
+  font-size: 15px;
   line-height: 25px;
 }
 .table-view-cell.sentence-cell > a:not(.btn) {
@@ -31,10 +31,14 @@
 .bar.bar-nav {
   border-bottom: 1px solid #cccccc;
 }
+.table-view-cell.sentence-cell > a {
+  cursor: pointer;
+}
 
-.table-view-cell.sentence-cell > .btn {
-  top: 84%;
-  right: 10px;
+.table-view-cell.sentence-cell > a > .btn {
+  position: absolute;
+  top: auto;
+  bottom: 0;
 }
 
 /* default: smartphone potrait & landscape size */

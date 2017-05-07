@@ -24,7 +24,7 @@ export default class PlayerAudio extends React.Component {
   componentDidMount() {
     // extracts html audioElement from ReactAudioPlayer
     const audioEl = this.rap.audioEl;
-    audioEl.volume = 0.05;
+    audioEl.volume = 0.005;
     this.setState({audioEl});
   }
   render() {

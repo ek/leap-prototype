@@ -76,7 +76,8 @@ export default class Player extends React.Component {
   render() {
     const { title, mp3 } = this.props.episode;
     const playerClassNames = cx({
-      'dn': this.state.view === 'definitions'
+      'dn': this.state.view !== 'transcript',
+      'PlayerAudio': true
     });
     return (
       <div>

@@ -21,11 +21,11 @@ export default class PlayerSentence extends React.Component {
       <li className={classNames}>
         <a onClick={this.chooseSentence}>
           {this.props.sentence.text}
+          <button onClick={this.chooseSentence}
+            className="btn btn-primary btn-outlined">
+            Definitions
+          </button>
         </a>
-        <button onClick={this.chooseSentence}
-          className="btn btn-primary btn-outlined">
-          Definitions
-        </button>
       </li>
     )
   }
