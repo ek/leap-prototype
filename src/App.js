@@ -26,9 +26,9 @@ class App extends Component {
       topics: data.topics
     }
   }
-  
+
   componentDidMount() {
-    this.setView('AppIntro', {
+    this.setView('PlayerShow', {
       episodeIndex: 0,
       podcastIndex: 0
     });
@@ -63,38 +63,38 @@ class App extends Component {
   renderView(view) {
     switch(view) {
       case 'AppIntro':
-        return <AppIntro 
+        return <AppIntro
           setView={this.setView} />
       case 'PodcastIndex':
-        return <PodcastIndex 
-          setView={this.setView} 
+        return <PodcastIndex
+          setView={this.setView}
           podcasts={this.state.podcasts} />
       case 'PodcastShow':
-        return <PodcastShow 
-          setView={this.setView} 
-          podcast={this.state.podcast} 
+        return <PodcastShow
+          setView={this.setView}
+          podcast={this.state.podcast}
           podcastIndex={this.state.podcastIndex} />
       case 'EpisodeIndex':
-        return <EpisodeIndex 
-          setView={this.setView} 
+        return <EpisodeIndex
+          setView={this.setView}
           podcast={this.state.podcast}
           podcastIndex={this.state.podcastIndex} />
       case 'EpisodeShow':
-        return <EpisodeShow 
-          setView={this.setView} 
+        return <EpisodeShow
+          setView={this.setView}
           episode={this.state.episode}
           episodeIndex={this.state.episodeIndex} />
       case 'PlayerShow':
-        return <PlayerShow 
-          setView={this.setView} 
+        return <PlayerShow
+          setView={this.setView}
           episode={this.state.episode}
           podcastIndex={this.state.episodeIndex} />
       case 'InfoAbout':
-        return <InfoAbout 
+        return <InfoAbout
           setView={this.setView} />
       case 'TopicIndex':
-        return <TopicIndex 
-          setView={this.setView} 
+        return <TopicIndex
+          setView={this.setView}
           topics={this.state.topics} />
       default:
         throw new Error('Unknown view name: '+view);

@@ -2,6 +2,7 @@
   height: calc(100% - 35px);
   margin-top: 35px;
   width: 100%;
+  font-family: 'Source Serif Pro', serif;
 }
 .PlayerTranscript .table-view {
   position: fixed;
@@ -15,4 +16,17 @@
 }
 .PlayerTranscript .table-view {
   margin-bottom: 0;
+}
+
+
+/* default: smartphone potrait & landscape size */
+@media only screen
+and (max-width : 667px) {
+
+}
+
+/* laptop and larger size */
+@media only screen
+and (min-width: 668px) {
+
 }

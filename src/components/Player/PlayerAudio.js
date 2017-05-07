@@ -9,9 +9,9 @@ export default class PlayerAudio extends React.Component {
     this.play = this.play.bind(this);
   }
   componentWillReceiveProps(nextProps) {
-    if(nextProps.isPaused === true) {
+    if(nextProps.isPaused === true && this.props.isPaused !== true) {
       this.pause();
-    } else {
+    } else if(nextProps.isPaused === false && this.props.isPaused !== false) {
       this.play();
     }
   }
@@ -24,15 +24,16 @@ export default class PlayerAudio extends React.Component {
   componentDidMount() {
     // extracts html audioElement from ReactAudioPlayer
     const audioEl = this.rap.audioEl;
-    audioEl.volume = 0.8;
+    audioEl.volume = 0.05;
     this.setState({audioEl});
   }
   render() {
-    const listenInterval = 100;
+    const listenInterval = 200;
     return (
       <div className="PlayerAudio">
         <ReactAudioPlayer
-          autoPlay
+          preload="true"
+          onCanPlay={this.props.onCanPlay}
           src={this.props.url}
           listenInterval={listenInterval}
           onListen={this.props.onListen}

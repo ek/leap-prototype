@@ -39,7 +39,7 @@ module.exports = [
     },
     {
       text: `Today, for 77 minutes, amid intense scrutiny of his leadership and connections to Russia, President Trump turns the scrutiny back on the news media.`,
-      start: "00:00:09.000",
+      start: "00:00:08.000",
       visible: false,
       sections: [
         {
@@ -103,7 +103,7 @@ module.exports = [
     },
     {
       text: `Attacking its credibility and its judgment during a remarkable news conference and the view from Russia.`,
-      start: "00:00:19.000",
+      start: "00:00:18.000",
       visible: false,
       sections: [
         {

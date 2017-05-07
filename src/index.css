@@ -3,7 +3,7 @@ html, body {
 }
 
 /* default: smartphone potrait & landscape size */
-@media only screen 
+@media only screen
 and (max-width : 667px) {
   #root {
     width: 100%;
@@ -12,7 +12,7 @@ and (max-width : 667px) {
 }
 
 /* laptop and larger size */
-@media only screen 
+@media only screen
 and (min-width: 668px) {
   #root {
     display: block;
@@ -33,4 +33,14 @@ and (min-width: 668px) {
     left: 20px;
     overflow: hidden;
   }
+}
+
+.btn-outlined.btn-primary {
+  color: #0098DB;
+}
+.btn-outlined.btn-primary {
+  color: #0098DB;
+}
+.btn-primary {
+  border: 1px solid #0098DB;
 }

@@ -1,29 +1,47 @@
+.PlayerTranscript .table-view {
+  background: #f2f1eb;
+}
 .table-view-cell.sentence-cell {
   display: none;
   padding: 0;
+  margin: 8px;
+  background: white;
+  border-radius: 0px;
+
+  box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.15);
 }
 .table-view-cell.sentence-cell > a:not(.btn) {
   margin: 0;
-  padding: 10px 12px 42px 12px;
+  padding: 12px 12px 52px 12px;
   font-size: 18px;
   line-height: 25px;
 }
 .table-view-cell.sentence-cell > a:not(.btn) {
-  border-left: 10px solid #cccccc;
-  padding-left: 10px;
+  border-left: 3px solid #cccccc;
+  padding-left: 9px;
 }
 .table-view-cell.sentence-cell.playing > a:not(.btn) {
-  border-left: 10px solid limegreen;
-  padding-left: 10px;
+  border-left: 3px solid #8C1515;
+  padding-left: 9px;
 }
 
 .table-view-cell.sentence-cell.sentence-visible {
   display: block;
 }
 .bar.bar-nav {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #cccccc;
 }
 
 .table-view-cell.sentence-cell > .btn {
-  top: 82%;
+  top: 84%;
+  right: 10px;
+}
+
+/* default: smartphone potrait & landscape size */
+@media only screen
+and (max-width : 667px) {
+  .table-view-cell.sentence-cell > a:not(.btn) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }

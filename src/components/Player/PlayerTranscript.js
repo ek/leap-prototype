@@ -3,23 +3,8 @@ import PlayerSentence from './PlayerSentence';
 import moment from 'moment';
 import './PlayerTranscript.css';
 
-/*
-http://jsfiddle.net/nT75k/2/
-var $cont = $('.container');
-$cont[0].scrollTop = $cont[0].scrollHeight;
-
-$('.inp').keyup(function(e) {
-    if (e.keyCode == 13) {
-        $cont.append('<p>' + $(this).val() + '</p>');
-        $cont[0].scrollTop = $cont[0].scrollHeight;
-        $(this).val('');
-    }
-})
-.focus();
-*/
-
 export default class PlayerTranscript extends React.Component {
-  
+
   constructor(props) {
     super(props);
     const sentences = props.transcript.map((s,i,a) => {
@@ -32,7 +17,7 @@ export default class PlayerTranscript extends React.Component {
     });
     this.state = { sentences };
   }
-  
+
   render() {
     return (
       <div className="PlayerTranscript">
@@ -58,7 +43,7 @@ export default class PlayerTranscript extends React.Component {
       this.setState({sentences});
     }
   }
-  
+
   renderSentences(sentences) {
     return sentences.map((sentence, index) => {
       return (
@@ -72,5 +57,5 @@ export default class PlayerTranscript extends React.Component {
       )
     });
   }
-  
+
 }

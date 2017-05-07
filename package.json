@@ -15,6 +15,7 @@
     "react-ratchet": "^0.5.0",
     "react-scroll": "^1.4.7",
     "reactstrap": "^4.2.0",
+    "tachyons": "^4.7.1",
     "zero-fill": "^2.2.3"
   },
   "devDependencies": {

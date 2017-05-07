@@ -1,35 +1,54 @@
 .PlayerDefinitions {
   height: calc(100% - 35px);
   margin-top: 35px;
+  margin: 0;
   width: 100%;
+  font-family: 'Source Serif Pro', serif;
 }
 .PlayerDefinitions .table-view {
+  background: #f2f1eb;
 }
-.PlayerDefinitions .table-view-cell {
-  margin: 0;
-  padding: 10px 12px 15px 12px;
+.PlayerDefinitions .table-view .table-view-cell {
+  padding: 10px 12px 10px 12px;
   font-size: 16px;
   line-height: 22px;
+  background: white;
 }
 .PlayerDefinitions .table-view-cell p {
   font-size: 16px;
   line-height: 22px;
 }
 .PlayerDefinitions .table-view-cell h4 {
-  font-weight: bold;
-  margin: 5px 0;
+  margin: 0;
+  font-size: 20px;
+  line-height: 24px;
 }
 .PlayerDefinitions .table-view-cell p {
   margin: 0 5px 0 0;
 }
 .PlayerDefinitions .table-view-cell.sentence-head {
-  border-left: 10px solid limegreen;
-  padding-left: 15px;
 }
 .PlayerDefinitions .table-view-cell.sentence-head h6 {
   text-transform: none;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 20px;
   font-style: italic;
-  margin: 0;
+  margin: 6px;
+}
+.PlayerDefinitions .definition-cell {
+  margin: 8px 12px 10px 8px;
+  box-shadow: 0px 1px 5px 0 rgba(0,0,0,0.1);
+  border-left: 3px solid #8C1515;
+}
+.PlayerDefinitions .definition-cell.navigate-right:after
+{
+  right: 8px;
+}
+.PlayerDefinitions .definition-cell.navigate-right a:active
+{
+  background: #8C1515;
+}
+.PlayerDefinitions .definition-cell.navigate-right a:active h4
+{
+  color: white;
 }
