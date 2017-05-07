@@ -9,6 +9,7 @@
   background: #eeeeee;
   width: 280px;
   overflow: hidden;
+  box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.15);
 }
 .react-audio-player {
   width: 460px;
@@ -21,4 +22,3 @@
     width: 102%;
   }
 }
-

@@ -30,7 +30,6 @@ export default class PlayerAudio extends React.Component {
   render() {
     const listenInterval = 200;
     return (
-      <div className="PlayerAudio">
         <ReactAudioPlayer
           preload="true"
           onCanPlay={this.props.onCanPlay}
@@ -39,7 +38,6 @@ export default class PlayerAudio extends React.Component {
           onListen={this.props.onListen}
           onPlay={this.props.onPlay}
           ref={c => this.rap = c } />
-      </div>
     )
   }
 }
