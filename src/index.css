@@ -23,7 +23,7 @@ and (min-width: 668px) {
     background-image: url(img/device-android.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    top: 49%;
+    top: 50%;
   }
   .App {
     display: block;

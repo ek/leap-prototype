@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import './PlayerSentence.css'
+import './PlayerSentence.css';
 
 export default class PlayerSentence extends React.Component {
   constructor() {
