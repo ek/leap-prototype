@@ -257,6 +257,7 @@ module.exports = [
             {
               key: "turned on",
               word: "Turned on",
+              image: 'turned-on.gif',
               definition: "To switch on something to make it run."
             }
           ]
@@ -264,7 +265,14 @@ module.exports = [
         {
           text: `open the newspapers and I see stories of chaos,`,
           visible: false,
-          items: ["chaos"]
+          items: [
+            {
+              key: "chaos",
+              word: "Chaos",
+              image: 'chaos.gif',
+              definition: "Complete disorder and confusion."
+            }
+          ]
         }
       ]
     },
@@ -280,16 +288,19 @@ module.exports = [
             {
               key: "chaos",
               word: "Chaos",
+              image: 'chaos.gif',
               definition: "Complete disorder and confusion."
             },
             {
               key: "yet",
               word: "Yet",
+              image: 'yet.png',
               definition: "But at the same time; but nevertheless."
             },
             {
               key: "opposite",
               word: "Opposite",
+              image: 'opposite.gif',
               definition: "A person or thing that is totally different from or the reverse of someone or something else."
             }
           ]
@@ -301,16 +312,19 @@ module.exports = [
             {
               key: "administration",
               word: "Administration",
+              image: 'admin.jpg',
               definition: "The officials in the executive branch of government under a particular chief executive. Example: the Trump administration."
             },
             {
               key: "running",
               word: "Running",
+              image: 'running.gif',
               definition: "The action of managing or operating something."
             },
             {
               key: "fine-tuned",
               word: "Fine-tuned",
+              image: 'fine-tuned.gif',
               definition: "To adjust precisely so as to bring to the highest level of performance or effectiveness."
             }
           ]
@@ -330,6 +344,7 @@ module.exports = [
             {
               key: "version",
               word: "Version",
+              image: 'version.gif',
               definition: "A particular form of something differing in certain respects from an earlier form."
             }
           ]
@@ -347,17 +362,19 @@ module.exports = [
       visible: false,
       sections: [
         {
-          text: `This week, it's the story of his national security adviser,`,
+          text: `This week, it's the story of his national security advisor,`,
           visible: false,
           items: [
             {
               key: "national security",
               word: "National security",
+              image: 'security.gif',
               definition: 'Is a concept that a government, along with its parliaments, should protect the state and its citizens against all kind of "national" crises through a variety of power projections, such as political power, diplomacy, economic power, military might, and so on.'
             },
             {
-              key: "adviser",
-              word: "Adviser",
+              key: "advisor",
+              word: "Advisor",
+              image: 'advice.gif',
               definition: "A person who gives advice, typically someone who is expert in a particular field."
             }
           ]
@@ -369,21 +386,25 @@ module.exports = [
             {
               key: "retired",
               word: "Retired",
+              image: 'retired.gif',
               definition: "Having left ones job and ceased to work."
             },
             {
               key: "lieutenant",
               word: "Lieutenant",
+              image: "lieutenant.jpg",
               definition: "A naval officer of a high rank, in particular a commissioned officer in the US Navy or Coast Guard ."
             },
             {
               key: "general",
               word: "General",
+              image: "lieutenant.jpg",
               definition: "A commander of an army, or an army officer of very high rank."
             },
             {
               key: "michael flynn",
               word: "Michael Flynn",
+              image: "michael_flynn.jpg",
               definition: 'Michael Thomas "Mike" Flynn (born December 1958) is a retired United States Army Lieutenant General who was the 18th Director of the Defense Intelligence Agency and the National Security Advisor to President Donald Trump.'
             }
           ]
@@ -402,16 +423,19 @@ module.exports = [
             {
               key: "forced to",
               word: "Forced to",
+              image: 'forced-to.jpg',
               definition: "Done against your wishes, or because it is suddenly made necessary by an unexpected situation."
             },
             {
               key: "resign",
               word: "Resign",
+              image:'resign.jpg',
               definition: "Voluntarily leave a job or other position."
             },
             {
               key: "reports",
               word: "Reports",
+              image: "reports.jpg",
               definition: "An account given of a particular matter, especially in the form of an official document, after thorough investigation or consideration by an appointed person or body."
             }
           ]

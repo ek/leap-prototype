@@ -55,6 +55,9 @@ export default class Player extends React.Component {
     console.log('on paused');
   }
   onListen(seconds) {
+    if(seconds >= 67) {
+      location.reload();
+    }
     this.setStateOnSeconds(seconds);
   }
   onCanPlay(e) {
