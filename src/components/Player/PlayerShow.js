@@ -80,7 +80,7 @@ export default class Player extends React.Component {
     setTimeout(function(){
       _that.setState({
         previousView: view,
-        setView: _that.localSetView
+        setView: view === 'PodcastIndex' ? _that.globalSetView : _that.localSetView
       });
     }, 10);
   }
@@ -122,6 +122,7 @@ export default class Player extends React.Component {
   renderView(state) {
     switch(state.view) {
       case 'transcript':
+        this.setPreviousView('PodcastIndex');
         return <PlayerTranscript
             setPreviousView={this.setPreviousView}
             seconds={state.seconds}

@@ -36,12 +36,20 @@ and (min-width: 668px) {
   }
 }
 
-.btn-outlined.btn-primary {
-  color: #0098DB;
+
+.btn-primary {
+  background-color: #0098DB;
 }
 .btn-outlined.btn-primary {
   color: #0098DB;
+  background: transparent;
 }
 .btn-primary {
   border: 1px solid #0098DB;
+}
+a {
+  color: #0098DB;
+}
+.btn-link {
+  color: #0098DB;
 }

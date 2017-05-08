@@ -27,13 +27,6 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
-    this.setView('PlayerShow', {
-      episodeIndex: 0,
-      podcastIndex: 0
-    });
-  }
-
   setView(view, opts = {}) {
     const newState = { view };
     if(opts.topic) {

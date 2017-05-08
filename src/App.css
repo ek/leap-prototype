@@ -3,9 +3,7 @@
   position: relative;
   height: 100%;
   width: 100%;
-  background: #efeff4;
-  background: white;
-  background: #DAD7CB;
+  background: #f2f1eb;
 }
 .content {
   background: #f2f1eb !important;
@@ -21,10 +19,15 @@ p.gray {
   font-style: italic;
 }
 .logo {
-  letter-spacing: -6px;
-  font-size: 62px;
+  letter-spacing: 10px;
+  font-size: 42px;
+  line-height: 42px;
+  margin: 0 0 10px 0;
+  font-weight: 200;
+  font-family: 'Source Serif Pro';
 }
 .tagline {
+  font-family: 'Source Serif Pro';
   font-size: 18px;
 }
 .content-info p {

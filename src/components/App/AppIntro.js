@@ -7,7 +7,7 @@ export default class AppIntro extends Component {
     this.handleInfoClick = this.handleInfoClick.bind(this);
   }
   handleStartClick() {
-    this.props.setView('TopicIndex')
+    this.props.setView('PodcastIndex')
   }
   handleInfoClick() {
     this.props.setView('InfoAbout')
@@ -15,20 +15,20 @@ export default class AppIntro extends Component {
   render () {
     return (
       <div className="content content-padded">
-        <h1 className="centered italic logo">LEAP</h1>
+        <h1 className="centered logo">LEAP</h1>
         <h4 className="centered tagline">
-          Learn English with any podcast
+          Learn English with Any Podcast
         </h4>
         <br/>
         <button
-          onClick={this.handleStartClick} 
+          onClick={this.handleStartClick}
           className="btn btn-primary btn-block">
           Start Learning
         </button>
         <br/>
         <p className="centered">
-          <button 
-            onClick={this.handleInfoClick} 
+          <button
+            onClick={this.handleInfoClick}
             className="btn btn-link btn-multiline btn-intro">
             How can listening to podcasts
             <br/>
