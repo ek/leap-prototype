@@ -25,10 +25,13 @@
 }
 .table-view-cell.sentence-cell.sentence-visible {
   display: block;
-  transition: all 0.5s ease-out;
-  max-height: 25px;
+  transition: all 0.6s ease-out;
+  max-height: 0px;
   overflow: hidden;
   outline: 0;
+  opacity: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .bar.bar-nav {
   border-bottom: 1px solid #cccccc;
@@ -50,5 +53,7 @@
 }
 .table-view-cell.sentence-cell.sentence-visible.anim {
   outline: 1;
-  max-height: 500px;
+  max-height: 280px;
+  opacity: 1;
+  margin: 8px;
 }

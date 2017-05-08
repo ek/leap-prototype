@@ -340,7 +340,6 @@ module.exports = [
           text: `In these stories, Trump sees a version of his presidency that he does not like,`,
           visible: false,
           items: [
-            "trump",
             {
               key: "version",
               word: "Version",
@@ -447,11 +446,13 @@ module.exports = [
             {
               key: "misled",
               word: "Misled",
+              image: 'mislead.jpg',
               definition: "Cause (someone) to have a wrong idea or impression about someone or something."
             },
             {
               key: "mike pence",
               word: "Mike Pence",
+              image: 'mike-pence.jpg',
               definition: 'Michael Richard "Mike" Pence (born June 7, 1959) is an American politician and lawyer and the 48th Vice President of the United States. He previously served as the 50th Governor of Indiana from 2013 to 2017.'
             }
           ]
@@ -463,6 +464,7 @@ module.exports = [
             {
               key: "ambassador",
               word: "Ambassador",
+              image: 'ambasador.jpg',
               definition: "An accredited diplomat sent by a country as its official representative to a foreign country."
             }
           ]
@@ -481,11 +483,13 @@ module.exports = [
             {
               key: "press",
               word: "press",
+              image: 'news-press.png',
               definition: "News media and agencies collectively, especially newspapers."
             },
             {
               key: "dishonest",
               word: "dishonest",
+              image: "dishonest.jpg",
               definition: "giving false information, intended to mislead or cheat"
             }
           ]
@@ -493,7 +497,7 @@ module.exports = [
         {
           text: `that if we don't talk about it`,
           visible: false,
-          items: [""]
+          items: []
         },
         {
           text: `we are doing a tremendous disservice to the American people. Tremendous disservice.`,
@@ -502,10 +506,12 @@ module.exports = [
             {
               key: "tremendous",
               word: "Tremendous",
+              image: 'tremendous.jpg',
               definition: "Very great in amount, scale, or intensity"
             },
             {
               key: "disservice",
+              image: "disservice.jpg",
               word: "Disservice",
               definition: "A harmful action."
             }
