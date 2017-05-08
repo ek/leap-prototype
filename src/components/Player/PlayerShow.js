@@ -19,6 +19,7 @@ export default class Player extends React.Component {
     this.onListen = this.onListen.bind(this);
     this.onPlay = this.onPlay.bind(this);
     this.onCanPlay = this.onCanPlay.bind(this);
+    this.setPreviousView = this.setPreviousView.bind(this);
     this.state = {
       setView: this.globalSetView,
       paused: false,
@@ -26,11 +27,14 @@ export default class Player extends React.Component {
       seconds: null,
       sentence: null,
       transcript: props.episode.transcript,
-      view: 'transcript' // may be 'transcript' or 'definitions'
+      view: 'transcript' // may be 'transcript', 'definitions', or 'definition'
     }
   }
   onChooseDefinition(definition) {
-    this.setState({view:'definition', definition: definition })
+    this.setState({
+      view:'definition',
+      definition: definition
+    });
   }
   setStateOnSeconds(seconds) {
     const hrs = Math.floor(seconds/3600);
@@ -55,7 +59,9 @@ export default class Player extends React.Component {
   }
   onCanPlay(e) {
     console.log('onCanPlay');
-    this.setState({isPaused:false})
+    this.setState({
+      isPaused: false
+    });
   }
   onChooseSentence(sentence) {
     this.setState({
@@ -66,11 +72,20 @@ export default class Player extends React.Component {
       setView: this.localSetView
     });
   }
+  setPreviousView(view) {
+    const _that = this;
+    setTimeout(function(){
+      _that.setState({
+        previousView: view,
+        setView: _that.localSetView
+      });
+    }, 10);
+  }
   localSetView(view) {
     this.setState({
       view,
-      setView: this.globalSetView,
-      isPaused: false
+      setView: view === 'definitions' ? this.globalSetView : this.localSetView,
+      isPaused: view === 'definitions' ? true : false
     });
   }
   render() {
@@ -105,16 +120,21 @@ export default class Player extends React.Component {
     switch(state.view) {
       case 'transcript':
         return <PlayerTranscript
+            setPreviousView={this.setPreviousView}
             seconds={state.seconds}
             time={state.time}
             onChooseSentence={this.onChooseSentence}
             transcript={state.transcript} />
       case 'definitions':
+        this.setPreviousView('transcript');
         return <PlayerDefinitions
+            setPreviousView={this.setPreviousView}
             onChooseDefinition={this.onChooseDefinition}
             sentence={state.sentence} />
       case 'definition':
+        this.setPreviousView('definitions');
         return <PlayerDefinitionDetail
+            setPreviousView={this.setPreviousView}
             definition={state.definition} />
       default:
         throw new Error('Unknown view name in PlayerShow: ' + state.view);
