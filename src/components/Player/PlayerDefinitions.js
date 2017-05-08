@@ -46,6 +46,7 @@ export default class PlayerDefinitions extends React.Component {
     return definitions.map((d, index) => {
       return (
         <PlayerDefinition
+          order={index}
           clicked={this.clickedDefinition}
           definition={d}
           key={index}>

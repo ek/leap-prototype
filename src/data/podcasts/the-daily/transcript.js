@@ -141,7 +141,7 @@ module.exports = [
             },
             {
               key: "judgement",
-              image: 'judgement.jpg'
+              image: 'judgement.jpg',
               word: "Judgement",
               definition: "The ability to make considered decisions or come to sensible conclusions."
             }
@@ -876,6 +876,7 @@ module.exports = [
           items: [
             {
               key: "arsenal",
+              image: 'arsenal.jpg',
               word: "Arsenal",
               definition: "An array of resources available for a certain purpose."
             }
