@@ -119,12 +119,12 @@ module.exports = [
       ]
     },
     {
-      text: `Attacking its credibility and its judgment during a remarkable news conference`,
+      text: `Attacking its credibility, and its judgment, during a remarkable news conference.`,
       start: "00:00:18.000",
       visible: false,
       sections: [
         {
-          text: `attacking its credibility and its judgement,`,
+          text: `attacking its credibility, and its judgement,`,
           visible: false,
           items: [
             {
@@ -148,7 +148,7 @@ module.exports = [
           ]
         },
         {
-          text: `during a remarkable news conference,`,
+          text: "during a remarkable news conference",
           visible: false,
           items: [
             {
@@ -168,20 +168,27 @@ module.exports = [
       ]
     },
     {
-      text: `, and the view from Russia,`,
+      text: "And, the view from Russia:",
+      start: "00:00:23.500",
       visible: false,
-      items: [
+      sections: [
         {
-          key: "the view",
-          word: "the view",
-          image: 'the-view.gif',
-          definition: "a particular way of considering or regarding something; an attitude or opinion."
-        },
-        {
-          key: "russia",
-          word: "Russia",
-          image: 'russia.jpg',
-          definition: "Officially the Russian Federation, is a country in Eurasia. At 17,075,200 square kilometres (6,592,800 sq mi), Russia is the largest country in the world by surface area, covering more than one-eighth of the Earth. Isthe ninth most populous country, with over 144 million people at the end of March 2016."
+          text: `And, the view from Russia:`,
+          visible: false,
+          items: [
+            {
+              key: "the view",
+              word: "the view",
+              image: 'the-view.gif',
+              definition: "a particular way of considering or regarding something; an attitude or opinion."
+            },
+            {
+              key: "russia",
+              word: "Russia",
+              image: 'russia.jpg',
+              definition: "Officially the Russian Federation, is a country in Eurasia. At 17,075,200 square kilometres (6,592,800 sq mi), Russia is the largest country in the world by surface area, covering more than one-eighth of the Earth. Isthe ninth most populous country, with over 144 million people at the end of March 2016."
+            }
+          ]
         }
       ]
     },
@@ -439,7 +446,7 @@ module.exports = [
       ]
     },
     {
-      text: `The press has become so dishonest that if we don't talk about it, we are doing a tremendous disservice to the American people. Tremendous disservice. `,
+      text: `The press has become so dishonest that if we don't talk about it, we are doing a tremendous disservice to the American people. Tremendous disservice.`,
       start: "00:01:15.000",
       visible: false,
       sections: [
@@ -582,7 +589,7 @@ module.exports = [
       ]
     },
     {
-      text: `where President Trump is standing behind a podium in the East Room.`,
+      text: `Where President Trump is standing behind a podium in the East Room.`,
       start: "00:01:38.000",
       visible: false,
       sections: [

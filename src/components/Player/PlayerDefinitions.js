@@ -3,18 +3,15 @@ import PlayerDefinition from './PlayerDefinition';
 import './PlayerDefinitions.css';
 
 export default class PlayerDefinitions extends React.Component {
-
   constructor(props) {
     super(props);
     this.returnStateFromProps = this.returnStateFromProps.bind(this);
     this.clickedDefinition = this.clickedDefinition.bind(this);
     this.state = this.returnStateFromProps(props);
   }
-
   clickedDefinition(e) {
     this.props.onChooseDefinition(e);
   }
-
   returnStateFromProps(props) {
     let sections = this.props.sentence.sections;
     const definitions = sections.map(s=>{
@@ -24,7 +21,6 @@ export default class PlayerDefinitions extends React.Component {
     });
     return { definitions }
   }
-
   render() {
     return (
       <div className="PlayerDefinitions">
@@ -37,11 +33,9 @@ export default class PlayerDefinitions extends React.Component {
       </div>
     )
   }
-
   componentWillReceiveProps(newProps) {
     this.setState(this.returnStateFromProps(newProps))
   }
-
   renderDefinitions(definitions) {
     return definitions.map((d, index) => {
       return (
@@ -54,5 +48,4 @@ export default class PlayerDefinitions extends React.Component {
       )
     });
   }
-
 }

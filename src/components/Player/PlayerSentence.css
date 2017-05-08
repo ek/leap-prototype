@@ -25,6 +25,9 @@
 }
 .table-view-cell.sentence-cell.sentence-visible {
   display: block;
+  transition: all 1s ease-out;
+  max-height: 25px;
+  overflow: hidden;
 }
 .bar.bar-nav {
   border-bottom: 1px solid #cccccc;
@@ -38,10 +41,12 @@
   bottom: 0;
 }
 /* default: smartphone potrait & landscape size */
-@media only screen
-and (max-width : 667px) {
+@media only screen and (max-width : 667px) {
   .table-view-cell.sentence-cell > a:not(.btn) {
     font-size: 20px;
     line-height: 28px;
   }
+}
+.table-view-cell.sentence-cell.sentence-visible.anim {
+  max-height: 500px;
 }

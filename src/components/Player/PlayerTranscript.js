@@ -4,7 +4,6 @@ import moment from 'moment';
 import './PlayerTranscript.css';
 
 export default class PlayerTranscript extends React.Component {
-
   constructor(props) {
     super(props);
     const sentences = props.transcript.map((s,i,a) => {
@@ -17,7 +16,6 @@ export default class PlayerTranscript extends React.Component {
     });
     this.state = { sentences };
   }
-
   render() {
     return (
       <div className="PlayerTranscript">
@@ -27,7 +25,6 @@ export default class PlayerTranscript extends React.Component {
       </div>
     )
   }
-
   componentWillReceiveProps(props) {
     const time = props.time || moment("00:00:00.000", "HH:mm:ss.SSS");
     let changedFlag = false;
@@ -43,12 +40,12 @@ export default class PlayerTranscript extends React.Component {
       this.setState({sentences});
     }
   }
-
   renderSentences(sentences) {
     return sentences.map((sentence, index) => {
       return (
         <div key={index}>
           <PlayerSentence
+            order={index}
             clicked={this.props.onChooseSentence}
             sentence={sentence}
             visible={sentence.visible}>

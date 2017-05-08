@@ -10,22 +10,23 @@ export default class PlayerDefinitionDetail extends React.Component {
 
   render() {
     let imageUrl = `/images/${this.props.definition.image}`;
+    let def = this.props.definition;
     return (
       <div className="PlayerDefinitionDetail">
         <ul className="table-view">
           <li className="table-view-cell sentence-head">
             <h3 className="">
-              {this.props.definition.word}
+              {def.word}
             </h3>
           </li>
           <li className="table-view-cell">
             <p>
-              {this.props.definition.definition}
+              {def.definition}
             </p>
           </li>
           <li className="table-view-cell">
             <p>
-              <img src={imageUrl} />
+              <img alt={def.word} src={imageUrl} />
             </p>
           </li>
         </ul>
