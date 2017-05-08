@@ -19,10 +19,11 @@ and (min-width: 668px) {
     position: relative;
     width: 320px;
     height: 650px;
-    margin: 5px auto;
+    margin: -325px auto;
     background-image: url(img/device-android.png);
     background-repeat: no-repeat;
     background-size: 100%;
+    top: 49%;
   }
   .App {
     display: block;
