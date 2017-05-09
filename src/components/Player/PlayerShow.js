@@ -61,7 +61,6 @@ export default class Player extends React.Component {
     this.setStateOnSeconds(seconds);
   }
   onCanPlay(e) {
-    console.log('onCanPlay');
     this.setState({
       isPaused: false
     });
